@@ -403,8 +403,8 @@ nav = [
         ]},
         { "考研(已完结)" = "about/kaoyan.md" }
     ]},
-    { "Mkdocs教程" = "blog/mkdocs/mkfirst/" },
-    { "Zensical教程" = "blog/zensical/indexfirst/" },
+    { "Mkdocs教程" = "https://wcowin.work/Mkdocs-Wcowin/" },
+    { "Zensical教程" = "https://wcowin.work/Zensical-Chinese-Tutorial/" },
     # { "开往" = "https://www.travellings.cn/go.html" }
 ]
 
