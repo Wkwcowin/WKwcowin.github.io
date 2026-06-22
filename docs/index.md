@@ -25,7 +25,7 @@ hide:
       ✈️ <a href="https://vpn07.com/index.html#/register?code=xWecG89k" target="_blank" rel="noopener noreferrer">好用机场</a> —— 季付低至22元|70+国家线路 千兆带宽|支持流媒体|8折优惠码：VPN07
     </div>
     <div class="oneclip-announcement-item">
-      ☺️ <a href="https://wcowin.work/blog/zensical/indexfirst/" target="_blank" rel="noopener noreferrer">Zensical中文教程</a> —— 最新的Zensical中文教程
+      ☺️ <a href="https://wcowin.work/Zensical-Chinese-Tutorial/" target="_blank" rel="noopener noreferrer">Zensical中文教程</a> —— 最新的Zensical中文教程
     </div>
     <div class="oneclip-announcement-item">
       🙌🏻 <a href="https://github.com/jaywhj/mkdocs-materialx" target="_blank" rel="noopener noreferrer">MaterialX</a> —— 下一代 MkDocs主题，让你继续用熟悉的方式构建漂亮文档

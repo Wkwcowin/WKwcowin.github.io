@@ -47,8 +47,7 @@
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Wcowin/Wcowin.github.io,Wcowin/Mkdocs-Wcowin&type=Date)](https://star-history.com/#Wcowin/Wcowin.github.io&Wcowin/Mkdocs-Wcowin&Date)
-
+[![Star History Chart](https://api.star-history.com/chart?repos=Wkwcowin/WKwcowin.github.io&type=date&legend=top-left)](https://www.star-history.com/?repos=Wkwcowin%2FWKwcowin.github.io&type=date&legend=top-left)
 <!-- ![Alt](https://repobeats.axiom.co/api/embed/06de0a1fb9c03714021eaa6ddfb741a847468334.svg "Repobeats analytics image") -->
 <!-- [![Stargazers over time](https://starchart.cc/Wcowin/Wcowin.github.io.svg?variant=adaptive)](https://starchart.cc/Wcowin/Wcowin.github.io) -->
 
