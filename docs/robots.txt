@@ -1,0 +1,13 @@
+# Robots.txt for wcowin.work
+# 允许所有搜索引擎爬取
+
+User-agent: *
+Allow: /
+
+# 允许抓取静态资源（CSS/JS/图片等），确保页面正确渲染
+Allow: /assets/
+Allow: /stylesheets/
+Allow: /javascripts/
+
+# Sitemap 位置
+Sitemap: https://wcowin.work/sitemap.xml

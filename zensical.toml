@@ -1,0 +1,689 @@
+# ==========================================
+# Zensical 配置文件
+# pip install --upgrade --force-reinstall zensical
+# ==========================================
+
+[project]
+# ===== 基本信息 [Info] =====
+site_name = "Wcowin's Blog"                      # 网站名称
+site_url = "https://wcowin.work/"                # 网站URL
+site_description = "知足且上进，温柔且坚定"         # 网站描述
+site_author = "Wcowin"                    # 网站作者
+copyright = "Copyright &copy; 2022~2026 Wcowin" # 左下角的版权声明
+docs_dir = "docs"                                # 文档目录
+site_dir = "site"                                # 生成的网站目录
+use_directory_urls = true                        # 使用目录形式的URL (例如: /page/ 而不是 /page.html)
+# validation = false
+
+# ===== 仓库配置 =====
+repo_url = "https://github.com/Wkwcowin/WKwcowin.github.io"  # 右上角点击跳转的链接
+repo_name = "WKwcowin.github.io"                           # 右上角的名字
+edit_uri = "edit/main/docs"                              # 编辑按钮跳转的链接
+
+# ===== 额外的 JavaScript 文件 =====
+# 按加载顺序排列
+extra_javascript = [
+    # "javascripts/glm-api-config.js",                          # Ask AI API Key 配置（已隐藏）
+    "https://cdn.jsdelivr.net/npm/marked/marked.min.js",        # Markdown 渲染库
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/chat-widget.js",                             # Ask AI 聊天组件
+    # "javascripts/chat-widget.js",                             # Ask AI 聊天组件（已隐藏）
+    # "javascripts/twt-chat.js",                                # TWT Chat 在线客服
+    # "javascripts/glm-config.js",                              # 智谱清言翻译配置
+    # "javascripts/glm-translate.js",                           # 智谱清言翻译系统
+    "javascripts/translate.js",                               # Edge 翻译服务
+    "javascripts/translate-edge-init.js",                     # Edge 翻译初始化
+    "javascripts/translation-switcher.js",                    # 翻译服务切换器
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/glm-config.js",    # 智谱清言翻译配置 CDN
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/glm-translate.js", # 智谱清言翻译系统 CDN
+    # "javascripts/unified-instant-handler.js",                 # 统一的即时导航处理器
+    # "javascripts/extra.js",                                   # 额外功能脚本
+    # "javascripts/mathjax.js",                                 # MathJax 配置
+    # "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"       # MathJax CDN (数学公式渲染)
+    # KaTeX 数学公式渲染（注意加载顺序）
+    # "https://unpkg.com/katex@0/dist/katex.min.js",            # 1. 先加载 KaTeX 核心库
+    # "https://unpkg.com/katex@0/dist/contrib/auto-render.min.js",  # 2. 再加载自动渲染插件
+    "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js",            # 1. 先加载 KaTeX 核心库
+    "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js",  # 2. 再加载自动渲染插件
+    # "javascripts/katex.js",                                    # 3. 最后加载配置文件
+    "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/katex.js",
+    "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/javascripts/feedback.js",  # Umami 反馈追踪
+    "javascripts/github-heatmap.js",                        # GitHub 贡献热力图
+    "javascripts/github-repo-card.js"                       # GitHub 仓库卡片
+]
+
+# =====  CSS 文件 =====
+extra_css = [
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/stylesheets/chat-widget.css",   # Ask AI 聊天组件样式
+    # "stylesheets/chat-widget.css",                                             # Ask AI 聊天组件样式（已隐藏）
+    # "stylesheets/extra.css",        # 额外样式
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/stylesheets/extra.css",         # 额外样式
+    "https://oneclip.cloud/Wcowin/stylesheets/extra.css",
+    "stylesheets/extra2.css",        # 额外样式2
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/stylesheets/extra2.css", # 额外样式2CDN
+    # "stylesheets/link.css",          # 友链样式
+    "https://oneclip.cloud/Wcowin/stylesheets/link.css", #友链CDN
+    "https://oneclip.cloud/Wcowin/stylesheets/poem.css",          # 诗词样式
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/stylesheets/poem.css", # 诗词样式CDN
+    # "stylesheets/customize.css",     # 按钮圆角化等自定义样式
+    "https://oneclip.cloud/Wcowin/stylesheets/ziti.css",          # 字体样式
+    # "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",  # KaTeX 样式 CDN
+    # "about/sty/portfolio.css"        # 作品集样式（已移至 geren.md 单独引入）
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/about/sty/portfolio.css" # 作品集样式CDN
+    "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",  # KaTeX 样式 CDN
+    "https://oneclip.cloud/Wcowin/stylesheets/github-widgets.css",            # GitHub 相关组件样式
+    # "https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/stylesheets/github-widgets.css"            # GitHub 相关组件样式
+
+]
+
+# ===== 导航配置 [Navigation] =====
+# 网站的导航菜单结构，支持多层嵌套
+nav = [
+    { "主页" = "index.md" },
+    { "技术" = [
+        "blog/indexblog.md",
+        { "OneClip 一款简单专业的macOS 剪贴板管理工具" = "blog/OneClip.md" },
+        { "临时邮箱是什么？" = "blog/temp-email.md" },
+        { "好用/好玩网站分享" = "blog/Webplay.md" },
+        { "甜甜圈🍩代码" = "blog/technique sharing/ttq.md" },
+        { "Mac/windows软件网站汇总" = "blog/macsoft.md" },
+        { "好物分享" = [
+            { "2026流量卡推荐：月租低至29元，无合约可随时注销" = "blog/posts/sim-card.md" }
+        ]},
+        { "密码学" = [
+            "blog/Cryptography/index.md",
+            { "数论基础" = "blog/Cryptography/Numbertheory.md" },
+            { "密码学引言" = "blog/Cryptography/Introduction.md" },
+            { "流密码" = "blog/Cryptography/Symmetriccryptography.md" },
+            { "分组密码" = "blog/Cryptography/Groupcipher.md" },
+            { "非对称密码" = "blog/Cryptography/Asymmetriccryptography.md" },
+            { "消息认证与哈希函数" = "blog/Cryptography/HashAndMAC.md" },
+            { "比特币体系：从零开始理解加密货币" = "blog/Cryptography/Bitcoin.md" },
+            { "密码协议与应用" = "blog/Cryptography/ProtocolAndApplication.md" },
+            { "现代密码学发展" = "blog/Cryptography/ModernCryptography.md" },
+        ]},
+        { "基于Mkdocs/zensical主题的站点" = "blog/technique sharing/comkdocs.md" },
+        { "Zensical中文教程" =[
+            { "前言" = "blog/Zensical/indexfirst.md" },
+            { "从MkDocs迁移" = "blog/Zensical/migration.md" },
+            { "快速开始Zensical" = "blog/Zensical/quick-start.md" },
+            { "Zensical配置详解" = "blog/Zensical/configuration.md" },
+            { "GitHub Pages 部署" = "blog/Zensical/github-pages.md"},
+            { "Vercel 部署指南" = "blog/Zensical/vercel-deployment.md" },
+            { "为网站添加 Ask AI 功能" = "blog/Zensical/ask-ai.md" },
+            { "添加多语言翻译" = "blog/Zensical/translate-multilang.md" },
+            { "添加 Microsoft 翻译服务" = "blog/Zensical/translate-microsoft.md" },
+            { "添加 GitHub 热力图卡片" = "blog/Zensical/github-heatmap.md" },
+            { "添加 GitHub 仓库卡片" = "blog/Zensical/github-repo-card.md" },
+            { "炫彩光辉头像效果实现" = "blog/websitebeauty/avatar-glow.md" },
+            { "Giscus 评论系统明暗主题同步修复教程" = "blog/Zensical/giscus-theme-sync.md" },
+        ]},
+        { "MKdocs教程" = [
+            { "MIT许可声明" = "blog/Mkdocs/MIT.md" },
+            { "0.Mkdocs教程前言" = "blog/Mkdocs/mkfirst.md" },
+            { "1.利用Mkdocs部署静态网页" = "blog/Mkdocs/mkdocs1.md" },
+            { "2.Mkdocs配置说明(mkdocs.yml)" = "blog/Mkdocs/mkdocs2.md" },
+            { "3.解决Github Pages部署mkdocs自定义域名失效的问题" = "blog/Mkdocs/mkdocs3.md" },
+            { "4.解决mkdocs serve 后127.0.0.1:8000无法自动刷新的问题(补充版)" = "blog/Mkdocs/click.md" },
+            { "网站添加Mkdocs博客" = "blog/Mkdocs/mkdocsblog.md" }
+        ]},
+        { "Mkdocs美化/补充" = [
+            { "Wcowin for MkDocs主题" = "blog/websitebeauty/mkdocs-wcowin1.md" },
+            { "为MKdocs添加AI摘要(Plus版本)" = "blog/websitebeauty/MkDocs-AI-Summary-plus.md" },
+            { "MkDocs文档日期插件" = "blog/websitebeauty/mkdocs-document-dates.md" },
+            { "为MKdocs添加多语言翻译" = "blog/websitebeauty/mkdocs-translate.md" },
+            { "为网站添加Google广告" = "blog/websitebeauty/GoogleAD.md" },
+            { "添加相关推荐文章" = "blog/websitebeauty/recommend.md" },
+            { "MkDocs文档AI摘要" = "blog/websitebeauty/Mkdocs-AI-Summary.md" },
+            { "添加阅读信息统计" = "blog/websitebeauty/reading_time.md" },
+            { "正则表达式基础" = "develop/regex.md" },
+            { "如何给MKdocs添加友链" = "linktech.md" },
+            { "如何自定义域名" = "blog/websitebeauty/Customdomain.md" },
+            { "网页圆角化设计" = "blog/websitebeauty/yuanjiaohua.md" },
+            { "添加评论系统(giscus为例)" = "blog/websitebeauty/mkcomments.md" },
+            { "添加顶部公告栏" = "blog/websitebeauty/header.md" },
+            { "添加在线聊天" = "blog/websitebeauty/webtalknow.md" },
+            { "修改网站字体" = "blog/websitebeauty/mkdocsfont.md" },
+            { "JS实现鼠标样式" = "blog/websitebeauty/shubiao.md" },
+            { "背景特效" = "blog/websitebeauty/backgroud.md" },
+            { "嵌入PDF文件" = "blog/websitebeauty/mkpdf.md" },
+            { "相对地址的一些问题" = "blog/websitebeauty/Relativeaddress.md" },
+            { "添加404页面" = "blog/websitebeauty/404.md" },
+            { "为MKdocs添加文章修订时间戳" = "blog/websitebeauty/time.md" },
+            { "页脚设置" = "blog/websitebeauty/footer.md" },
+            { "加速网站访问的一些心得" = "blog/websitebeauty/accelerate.md" }
+        ]},
+        { "技术分享" = [
+            { "语雀" = "blog/yuque.md" },
+            { "Win11镜像下载/KMS激活" = "blog/technique sharing/win.md" },
+            { "实用脚本分享" = "blog/technique sharing/jiaoben.md" },
+            { "搭建个人图床" = "blog/technique sharing/tuchuang.md" },
+            { "oh-my-zsh 更新" = "blog/technique sharing/ohmuzsh.md" },
+            { "解决谷歌翻译用不了的问题" = "blog/technique sharing/googletranslate.md" },
+            { "爱心代码" = "blog/technique sharing/aixin.md" },
+            { "用Matlab画玫瑰百合花" = "blog/technique sharing/matlabrose.md" },
+            { "科学上网" = "blog/technique sharing/kexue.md" },
+            { "计算机编年史" = "blog/technique sharing/jisuanjibiannianshi.md" }
+        ]},
+        { "学术" = [
+            { "LaTeX常用符号整理" = "blog/Academic/LaTeX.md" },
+            { "一份简短的关于LATEX安装的介绍" = "https://mirrors.sjtug.sjtu.edu.cn/ctan/info/install-latex-guide-zh-cn/install-latex-guide-zh-cn.pdf" },
+            { "希腊字母总结" = "blog/Academic/希腊字母.pdf" },
+            { "Math" = "blog/Academic/math.md" },
+            { "数学竞赛" = [
+                { "第十四届全国大学生数学竞赛(非数学类)初赛补赛详细解答" = "blog/Academic/Math/14.md" },
+                { "第十三届全国大学生数学竞赛(非数学类)决赛详细解答" = "blog/Academic/Math/13js.md" }
+            ]},
+            { "电磁场期末复习索引" = "blog/Academic/diancichang.html" },
+            { "电磁场期末公式总结(手写)" = "blog/Academic/ddiancichang.md" }
+        ]},
+        { "Mac" = [
+            { "Mac电脑安装软件报错解决办法汇总" = "https://mp.weixin.qq.com/s/qjSx09tqNq1KfVug2WtQFg" },
+            { "PD虚拟机" = "blog/Mac/Pd.md" },
+            { '提示 "XXX"已损坏,无法打开' = "blog/Mac/sunhuai.md" },
+            { "Macbook启动台顽固应用图标删除方法" = "blog/Mac/shanchu.md" },
+            { "Homebrew国内如何自动安装(国内地址)(Mac & Linux)" = "blog/Mac/homebrew.md" },
+            { "mac 无法访问 github 的解决办法" = "blog/Mac/jiasugithub.md" },
+            { "Mac的esc键失效的解决方法" = "blog/Mac/Macesc.md" },
+            { "启动台图标顺序错乱怎么办" = "blog/Mac/Launchpad.md" },
+            { "Mac小技巧:去除系统截图名的日期后缀" = "blog/Mac/jietu.md" },
+            { "小小Mac技巧" = "blog/Mac/xjiq.md" },
+            { "Mac隐藏彩蛋" = "blog/Mac/maccd.md" },
+            { "Mac 键盘快捷键" = "blog/Mac/kjj.md" }
+        ]},
+        { "iPhone" = [
+            { "iphone多账号如何不频繁登录,双重认证" = "blog/iphone/iphoneduozhanghao.md" },
+            { "苹果iphone /iOS 限免网站合集" = "blog/iphone/iphonexianmian.md" },
+            { "苹果手机如何去除开屏广告" = "blog/iphone/iphonequchukaiping.md" }
+        ]},
+        { "WIN" = [
+            { "彻底卸载360安全卫士的方法" = "blog/Win/360.md" },
+            { "三步卸载 Microsoft Edge" = "blog/Win/edgexz.md" },
+            { "Windows快捷键" = "blog/Win/winkjj.md" }
+        ]},
+        { "Python" = [
+            { "uv:新一代Python包管理工具入门" = "blog/py/uv.md" },
+            { "将Python文件.py打包成.exe可执行程序" = "blog/py/python.md" },
+            { "PIP" = "blog/py/pip.md" }
+        ]}
+    ]},
+    { "开发" = [
+        "develop/index.md",
+        { "AI" = [
+            "develop/AI/index.md",
+            { "AI工具(2026最新)" = "develop/AItools.md" },
+            { "Prompt 工程入门" = "develop/AI/prompt.md" },
+            { "上下文工程（Context Engineering）" = "develop/AI/context-engineering.md" },
+            { "AI Agent 入门" = "develop/AI/agent.md" },
+            { "Agentic AI：从 Chatbot 到可行动的智能体" = "develop/AI/agentic-ai.md" },
+            { "具身智能：当 AI 拥有身体，物理世界迎来新纪元" = "develop/AI/embodied-ai.md" },
+            { "JEPA：联合嵌入预测架构——通往世界模型的非生成之路" = "develop/AI/jepa.md" },
+            { "What is MCP" = "develop/AI/mcp.md" },
+            { "A2A 协议（Agent-to-Agent）" = "develop/AI/a2a.md" },
+            { "RAG技术(检索增强生成)" = "develop/AI/rag.md" },
+            { "Skill 使用介绍" = "develop/AI/skill.md" },
+            { "多智能体协作入门" = "develop/AI/multi-agent.md" },
+            { "深度推理与测试时计算" = "develop/AI/deep-reasoning.md" },
+            { "AI 安全与对抗" = "develop/AI/ai-security.md" },
+            { "Attention Residuals：Kimi架构创新" = "develop/AI/attention-residuals.md" },
+            { "Claude Code指南" = "develop/Claude-Code.md" },
+            { "Codex指南" = "develop/ChatGPT.md" },
+            { "CC Switch：Claude Code / Codex 模型切换工具" = "develop/AI/cc-switch.md" },
+            { "OpenClaw：本地开源AI助手" = "develop/AI/openclaw.md" },
+            { "Hermes Agent：自进化的 AI Agent" = "develop/AI/hermes-agent.md" },
+            { "nanobot：超轻量级 AI 助手" = "develop/AI/nanobot.md" }
+        ]},
+        { "Python 环境管理最佳实践" = "develop/environment.md" },
+        { "Anaconda 使用教程" = "develop/Anaconda.md" },
+        { "DeepSeek:从入门到精通" = "develop/deepseek.md" },
+        { "GitHub 解封指南——This account is flagged" = "develop/GitHub-unblocked.md"},
+        { "macOS开发" = [
+            "develop/Mac-development/index.md",
+            { "Mac 开发环境检查清单" = "develop/Mac-development/Mac-Development-Environment-Checklist.md" },
+            { "Mac Shell 环境优化指南" = "develop/Mac-development/Mac-Shell-Environment-Optimization.md" },
+            { "OneClip 开发经验分享：从零到一" = "develop/Mac-development/OneClip-Development-Experience.md" },
+            { "OneClip 架构设计与核心模块解析" = "develop/Mac-development/OneClip-Architecture-Design.md" },
+            { "应用分发签名——以 OneClip 为例" = "develop/Mac-development/OneClip-Code-Signing-Guide.md" },
+            { "PP-OCRv5 轻量级 OCR 识别方案使用指南" = "develop/Mac-development/PP-OCRv5-Guide.md" }
+        ]},
+        { "我的开发项目/作品/应用" = [
+            "develop/Mywork/index.md",
+            { "OneClip" = "develop/Mywork/OneClip.md" },
+            { "FinderClip" = "develop/Mywork/Mac-Finder-Clipboard.md" },
+            { "Wcowin for MkDocs主题" = "develop/Mywork/mkdocs-wcowin.md" },
+            { "Mkdocs相关插件" = "develop/Mywork/mkdocsplugin.md" },
+            { "简单的JavaScript音乐播放器" = "develop/Mywork/muplayer.md" },
+            { "基于OpenCV的人脸识别系统" = "develop/Mywork/face-recognition.md" },
+            { "用AirScript脚本给女/男朋友发送每日早安邮件" = "develop/Mywork/email.md" },
+            { "基于讯飞人脸算法的人脸比对" = "develop/Mywork/face_compare.md" },
+            { "基于百度API和OpenCV的智能车牌识别程序" = "develop/Mywork/opencv.md" },
+            { "利用百度API进行植物识别" = "develop/Mywork/aizhiwu.md" },
+            { "设计作品" = "develop/Mywork/design.md" }
+        ]},
+        { "我的设备" = "develop/mydevice.md" },
+        { "Markdown" = [
+            { "Markdown指南" = "develop/Markdown/markdown.md" },
+            { "MWeb Pro" = "develop/Markdown/MWeb.md" }
+        ]},
+        { "Git 实用技巧" = "develop/git.md" },
+        { "设计美学" = [
+            { "唐·诺曼—情感设计的三个层次" = "develop/designbeauty/db1.md" },
+            { "我对设计的一些观点" = "develop/designbeauty/my-to-desihn.md" }
+        ]},
+        { "利用Lighthouse测试网站性能" = "develop/lighthouse.md" },
+        { "What is Github" = "develop/Github.md" },
+        { "如何将 github pages 迁移到 vercel 上托管" = "develop/vercel.md" },
+        { "大厂们的良心软件～" = "develop/fenxiang.md" },
+        { "写给所有 Mac 用户的摸鱼指北" = "develop/Mac.md" },
+        { "看源码才懂" = "develop/kanyuanma.md" }
+    ]},
+    { "科研" = [
+        "research/index.md",
+        { "低空技术与工程" = [
+            "research/aerotech/index.md",
+            { "基础理论与方法" = [
+                { "低空交通系统建模" = "research/aerotech/system-modeling.md" },
+                { "低空航线网络规划" = "research/aerotech/route-network.md" }
+            ]}
+        ]},
+        "research/UGP.md",
+    ]},
+    { "闲聊" = [
+        "relax/index.md",
+        { "推荐的Books" = "relax/tuijianyuedu.md" },
+        { "Apple" = "relax/Apple.md" },
+        { "小米" = "relax/xiaomo.md" },
+        { "诗文" = [
+            { "枫桥夜泊" = "relax/shiwen/fqyb.md" },
+            { "滕王阁序" = "relax/shiwen/twgx.md" },
+            { "望江南·超然台作" = "relax/shiwen/sjcnh.md" },
+            { "击鼓" = "relax/shiwen/jg.md" },
+            { "雨霖铃·秋别" = "relax/shiwen/yll.md" },
+            { "江城子·乙卯正月二十日夜记梦" = "relax/shiwen/jcz.md" }
+        ]},
+        { "八字六爻" = [
+            "relax/skyearth/20251.md"
+        ]},
+        { "日记" = [
+            { "2024" = [
+                { "20240131" = "relax/diary/2024/20240131.md" },
+                { "20240218" = "relax/diary/2024/20240218.md" },
+                { "20241224" = "relax/diary/2024/20241224.md" }
+            ]},
+            { "2025" = [
+                { "20250419" = "relax/diary/2025/20250419.md" }
+            ]},
+            { "2026" = [
+                { "20260407" = "relax/diary/2026/20260407.md" }
+            ]}
+        ]},
+        { "数至十" = [
+            { "1" = "relax/wkwMath/1.md" },
+            { "2" = "relax/wkwMath/2.md" },
+            { "3" = "relax/wkwMath/3.md" },
+            { "4" = "relax/wkwMath/4.md" },
+            { "5" = "relax/wkwMath/5.md" },
+            { "6" = "relax/wkwMath/6.md" }
+        ]},
+        { "观影" = [
+            { "推荐的番剧" = "relax/Movie/tuijianfanju.md" },
+            { "推荐的电影" = "relax/Movie/tuijiandedianyin.md" },
+            { "推荐的电视剧" = "relax/Movie/tuijiandsj.md" }
+        ]},
+        { "杂文" = [
+            { "毛主席语录选编" = "relax/Essay/mzdyl.md" },
+            { "《目送》节选" = "relax/Essay/musong.md" },
+            { "大学一个人吃饭很丢人吗？" = "relax/Essay/dx.md" },
+            { "luv letter" = "relax/Essay/luv letter.md" },
+            { "有哪些给男孩子在谈恋爱时的忠告？" = "relax/Essay/zhonggao.md" },
+            { "哈基米🐈" = "relax/Essay/cat.md" }
+        ]},
+        { "程序人生" = [
+            { "《程序员成长历程的四个阶段》" = "relax/Manong/sigejieduan.md" },
+            { "《程序员脱单指南》" = "relax/Manong/tuodanbukeneng.md" },
+            { "《程序员学习路线图》" = "relax/Manong/wtf.md" },
+            { "printf心形代码" = "relax/Manong/cxiaoaixin.md" }
+        ]},
+        { "信" = [
+            { "第一封" = "relax/Letter/letter1.md" },
+            { "第二封" = "relax/Letter/letter2.md" },
+            { "情书" = [
+                { "朱生豪与宋清如" = "relax/Letter/luvletter/sqrzszyz.md" },
+                { "《朱生豪情书全集摘录》(021)" = "relax/Letter/luvletter/zhushenghao1.md" },
+                { "《朱生豪情书全集摘录》(031)" = "relax/Letter/luvletter/zhushenghao2.md" },
+                { "《朱生豪情书全集摘录》(036)" = "relax/Letter/luvletter/zhushenghao3.md" },
+                { "《朱生豪情书全集摘录》(046)" = "relax/Letter/luvletter/zhushenghao4.md" },
+                { "《朱生豪情书全集摘录》(053)" = "relax/Letter/luvletter/zhushenghao5.md" },
+                { "《朱生豪情书全集摘录》(055)" = "relax/Letter/luvletter/zhushenghao6.md" }
+            ]}
+        ]},
+        # { "王冰冰♡" = "relax/wbb.md" },
+        { "Game" = [
+            { "Genshin" = "relax/Game/yuanshen.md" },
+            { "如何玩好王者荣耀" = "relax/Game/wzry.md" }
+        ]},
+        { "入党结业考试题总结" = "relax/rudang.md" },
+        { "润学之为什么润" = "about/run.md" },
+        { "让人说话，天塌不下来" = "about/maozedong.md" },
+        { "关于教育革命的谈话" = "relax/jiaoyu.md" },
+        { "程序猿神之楷模:一个人,一个网站,5.75亿美元卖掉" = "relax/kaimo.md" }
+    ]},
+    { "旅行" = [
+        "trip/index.md",
+        { "重庆" = "trip/CQ.md" },
+        { "西安" = "trip/Xian.md" },
+        { "武汉" = "trip/Wuhan.md" },
+        { "我的家乡——漯河" = "trip/LH.md" },
+        { "足迹" = "trip/footmark.md" }
+    ]},
+    # { "标签" = "tag.md" },
+    { "留言板" = "waline.md" },
+    { "朋友" = [
+        { "友链" = "link.md" },
+        { "如何给MKdocs添加友链" = "blog/Mkdocs/linktech.md" }
+    ]},
+    # { "博客" = [
+    #     "blog/index.md"
+    # ]},
+    { "关于" = [
+        { "关于我" = "about/geren.md" },
+        # { "个人简历" = "about/resume.md" },
+        { "免责声明" = "about/shengming.md" },
+        { "支持作者" = "about/zcw.md" },
+        { "Github主页介绍" = "about/Wcowin.md" },
+        { "网站制作" = "about/web.md" },
+        { "毕业之前值得去做的30件事" = "about/biye.md" },
+        { "测试组件" = "about/test.md" },
+        { "404页面" = "about/404.md" },
+        { "网站状态" = "https://cloud.umami.is/share/M0AHDa2Dsn6p7mR1/wcowin.work" },
+        { "个人目标" = "about/goal.md" },
+        { "年度总结" = [
+            { "2023" = "about/zongjie/2023.md" },
+            { "2024" = "about/zongjie/2024.md" },
+            { "2025" = "about/zongjie/2025.md"}
+        ]},
+        { "考研(已完结)" = "about/kaoyan.md" }
+    ]},
+    { "Mkdocs教程" = "blog/mkdocs/mkfirst/" },
+    { "Zensical教程" = "blog/zensical/indexfirst/" },
+    # { "开往" = "https://www.travellings.cn/go.html" }
+]
+
+# ===== 主题配置 [UI] =====
+[project.theme]
+variant = "modern"                # Zensical 特有：使用 modern 主题变体
+# name = "material"                 # 使用 Material for MkDocs 主题
+custom_dir = "docs/overrides"          # 自定义主题目录（相对于配置文件）
+logo = "https://pic2.zhimg.com/100/v2-864dbf5fe2906aae3f5f18b491320a0d_r.jpg"
+# "https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png"
+# "https://pica.zhimg.com/80/v2-74ecd899c7c4cc0258930eaff239a21b_1440w.webp"  # 网站 Logo
+favicon = "https://i.stardots.io/wcowin/1750090373988.png"                         # 网站图标
+language = "zh"                   # 网站语言：中文
+font.code = "JetBrains Mono"
+
+# 主题功能特性
+features = [
+    "announce.dismiss",           # 可关闭公告栏
+    "navigation.prune",           # 只渲染可见导航项
+    "navigation.tracking",        # 滚动时URL锚点自动更新
+    "navigation.tabs",            # 一级导航显示为顶部Tab
+    "navigation.sections",        # 侧边栏分组
+    "navigation.top",             # 返回顶部按钮
+    "navigation.footer",          # 上一页/下一页导航
+    # "navigation.instant",      # 即时导航
+    "navigation.instant.progress",
+    "navigation.instant.prefetch",  # 预加载
+    "navigation.path",            # URL路径导航
+    # "navigation.tabs.sticky",   # 顶部导航栏始终可见
+    "search.suggest",             # 搜索建议
+    "search.highlight",           # 搜索结果高亮
+    "search.share",               # 搜索结果分享
+    "toc.follow",                 # 目录跟随滚动
+    "navigation.expand",          # 默认展开导航
+    "navigation.indexes",         # 章节索引页
+    "content.tabs.link",          # 内容标签页链接
+    "content.tooltips",           # 内容提示框
+    "content.code.copy",          # 代码复制按钮
+    "content.code.select",        # 代码选择功能
+    "content.code.annotate"       # 代码注释功能
+]
+
+
+# ===== 调色板配置 =====
+# Palette toggle for automatic mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "切换到浅色模式"
+
+# Palette toggle for light mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "custom"
+accent = "blue"
+toggle.icon = "lucide/sun"
+toggle.name = "切换到夜间模式"
+
+# Palette toggle for dark mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+accent = "blue"
+toggle.icon = "lucide/moon"
+toggle.name = "切换到系统偏好设置"
+
+# ===== 图标配置 =====
+[project.theme.icon]
+repo = "fontawesome/brands/github"                      # 仓库图标
+previous = "fontawesome/solid/arrow-left"              # 上一页图标
+next = "fontawesome/solid/arrow-right"                 # 下一页图标
+alternate = "fontawesome/solid/language"               # 语言切换图标
+
+# ==========================================
+# 额外配置 [Extra]
+# ==========================================
+[project.extra]
+generator = true
+
+# ===== 状态标签 =====
+[project.extra.status]
+new = "最近添加"
+deprecated = "已弃用"
+draft = "草稿"
+
+
+# ===== 多语言切换配置 =====
+# 基于智谱清言翻译系统
+# [[project.extra.alternate]]
+# name = "中文"
+# link = "#glm-translate-chinese_simplified"
+# lang = "zh"
+
+# [[project.extra.alternate]]
+# name = "English"
+# link = "#glm-translate-english"
+# lang = "en"
+
+# 基于 Microsoft 翻译服务（支持所有现代浏览器）
+[[project.extra.alternate]]
+name = "中文"
+link = "#edge-translate-chinese_simplified"
+lang = "zh"
+
+[[project.extra.alternate]]
+name = "English"
+link = "#edge-translate-english"
+lang = "en"
+
+# [[project.extra.alternate]]
+# name = "日本語"
+# link = "#glm-translate-japanese"
+# lang = "ja"
+
+# ===== 社交媒体链接 =====
+# 显示在页脚的社交媒体图标
+[[project.extra.social]]
+icon = "fontawesome/brands/weixin"
+link = "https://picx.zhimg.com/80/v2-ff732fe4d4b59cd111ca0e4a6eb5e1a9_1440w.webp"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/telegram"
+link = "https://t.me/Wcowin"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/x-twitter"
+link = "https://x.com/intent/follow?screen_name=kewen9694"
+name = "Twitter"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/Wkwcowin"
+name = "Github"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/bilibili"
+link = "https://space.bilibili.com/1407028951/lists/4566631?type=series"
+
+
+[[project.extra.social]]
+icon = "fontawesome/regular/envelope"
+link = "mailto:wcowin@qq.com"  # 联系方式
+name = "Email"
+
+# ===== Umami Analytics =====
+# 自定义 Umami 分析配置
+[project.extra.analytics]
+provider = "custom"
+property = "foobar"
+script_url = "https://cloud.umami.is/script.js"
+website_id = "061b4dea-9b7b-4ffa-9071-74cde70f3dfb"
+[project.extra.analytics.feedback]
+title = "此页面有帮助吗？"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/thumb-up-outline"
+name = "This page was helpful"
+data = 1
+note = "谢谢你的反馈！"
+
+[[project.extra.analytics.feedback.ratings]]
+icon = "material/thumb-down-outline"
+name = "This page could be improved"
+data = 0
+note = "感谢您的反馈！"
+
+# ==========================================
+# 插件配置 [Plugins]
+# ==========================================
+
+# ===== 搜索插件 =====
+[project.plugins.search]
+separator = '[\s\u200b\-]'  # 搜索分隔符
+
+# ===== 博客插件 =====
+[project.plugins.blog]
+post_date_format = "full"                    # 时间格式：完整日期
+draft = true                                  # 启用草稿功能
+draft_if_future_date = true                   # 自动将具有未来日期的帖子标记为草稿
+post_readtime = true                          # 显示阅读时间
+post_readtime_words_per_minute = 265          # 每分钟阅读字数（中文适配）
+post_url_format = "{date}/{slug}"             # 文章URL格式
+pagination_per_page = 5                       # 每页显示文章数
+pagination_url_format = "page/{page}"         # 分页URL格式
+
+# ===== 标签插件 =====
+[project.plugins.tags]
+
+# ===== 最小化插件 =====
+[project.plugins.minify]
+minify_html = true
+minify_css = true
+minify_js = true
+
+# ===== 文档日期插件 =====
+# 显示文档的创建和更新时间
+# [project.plugins."document-dates"]
+# position = "bottom"            # 显示位置：bottom (文档末尾) 或 top (标题后)
+# type = "date"                  # 日期类型：date (日期) / datetime (日期时间) / timeago (相对时间)
+# locale = "zh"                  # 本地化语言
+# date_format = "%Y-%m-%d"       # 日期格式
+# time_format = "%H:%M:%S"       # 时间格式
+# show_author = true             # 显示作者信息
+# exclude = [                    # 排除以下文件
+#     "index.md",
+#     "tag.md",
+#     "waline.md",
+#     "blog/posts/*",
+#     "blog/index.md",
+#     "link.md",
+#     "blog/Mkdocs/linktech.md",
+#     "about/*"
+# ]
+
+# ===== RSS 订阅插件 =====
+# [project.plugins.rss]
+# enabled = true                                                                    # 启用 RSS 订阅
+# match_path = "(blog|develop|relax|trip)/.*"                                       # 包含的路径：博客、开发、闲聊、旅行
+# use_git = false                                                                   # 禁用Git日志读取，避免警告
+# categories = ["tags", "categories"]                                               # 分类标签
+# comments_path = "#__comments"                                                     # 评论区锚点
+# image = "https://wcowin.work/assets/avatar.jpg"                                   # RSS 订阅图片
+# feed_ttl = 1440                                                                   # 订阅更新时间（分钟），24小时
+# length = 20                                                                       # 最新文章数量
+# pretty_print = true                                                               # 格式化输出
+# feed_description = "Wcowin 的个人网站 - 技术分享、开发笔记、生活随笔、旅行记录"        # RSS 描述
+# feed_title = "Wcowin's Blog RSS Feed"                                             # RSS 标题
+
+# [project.plugins.rss.date_from_meta]
+# as_creation = "date"           # 创建日期来源
+# as_update = "update"           # 更新日期来源
+# datetime_format = "%Y-%m-%d"   # 日期格式
+
+# [project.plugins.rss.url_parameters]
+# utm_source = "rss"             # UTM 来源标记
+# utm_medium = "feed"            # UTM 媒介标记
+
+# ==========================================
+# Markdown 扩展配置 [Markdown Extensions]
+# ==========================================
+
+# ===== 官方默认配置（严格按照 Zensical 官方文档）=====
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+toc_depth = 3
+permalink = true  # 固定标题位置为当前位置，显示 # 符号
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+[project.markdown_extensions.pymdownx.betterem]
+smart_enable = false
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_generator = "zensical.extensions.emoji.to_svg"
+emoji_index = "zensical.extensions.emoji.twemoji"
+[project.markdown_extensions.pymdownx.highlight]
+pygments_lang_class = true
+auto_title = false
+linenums = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+[project.markdown_extensions.pymdownx.tilde]
+[project.markdown_extensions.tables]
+[project.markdown_extensions.pymdownx.snippets]
+# [project.markdown_extensions.zensical.extensions.glightbox]

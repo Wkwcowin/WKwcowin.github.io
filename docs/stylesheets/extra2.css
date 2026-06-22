@@ -1,0 +1,363 @@
+/* 保持搜索框输入区域字体为默认 */
+.md-search__input {
+  font-family: inherit !important;
+}
+
+/* OneClip 公告栏样式 - 简约设计 */
+.oneclip-announcement {
+  background: linear-gradient(135deg, rgba(81, 143, 193, 0.06) 0%, rgba(81, 143, 193, 0.03) 100%);
+  border: 1px solid rgba(81, 143, 193, 0.15);
+  color: var(--md-default-fg-color);
+  text-align: center;
+  padding: 10px 20px;
+  margin: -20px auto 50px auto;
+  border-radius: 20px;
+  max-width: 600px;
+  position: relative;
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+/* 公告栏关闭按钮 */
+.oneclip-announcement-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: rgba(81, 143, 193, 0.1);
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.oneclip-announcement-close svg {
+  display: block;
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.oneclip-announcement-close:hover {
+  background: rgba(81, 143, 193, 0.2);
+  color: var(--md-primary-fg-color, #518FC1);
+}
+
+/* 已关闭的公告栏状态 */
+.oneclip-announcement.is-closed {
+  opacity: 0;
+  transform: translateY(-20px);
+  max-height: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* 电脑端加宽公告栏，避免第三行换行 */
+@media (min-width: 768px) {
+  .oneclip-announcement {
+    max-width: 1200px;
+  }
+}
+
+/* 暗色模式适配 */
+[data-md-color-scheme="slate"] .oneclip-announcement {
+  background: linear-gradient(135deg, rgba(81, 143, 193, 0.04) 0%, rgba(81, 143, 193, 0.02) 100%);
+  border-color: rgba(81, 143, 193, 0.12);
+}
+
+.oneclip-announcement-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 移动端：每条公告独立成块，分隔清晰、减少拥挤感 */
+@media (max-width: 767px) {
+  .oneclip-announcement {
+    padding: 12px 36px 12px 14px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    border-radius: 16px;
+  }
+
+  .oneclip-announcement-close {
+    top: 6px;
+    right: 8px;
+    width: 22px;
+    height: 22px;
+    font-size: 16px;
+  }
+  .oneclip-announcement-content {
+    font-size: 14px;
+    line-height: 1.55;
+    text-align: left;
+  }
+  .oneclip-announcement-item {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(81, 143, 193, 0.12);
+  }
+  .oneclip-announcement-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .oneclip-announcement-item:first-child {
+    padding-top: 0;
+  }
+  /* “了解更多”在窄屏单独成行，避免与主文案挤在一起断行混乱 */
+  .oneclip-cta {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+    font-size: 13px;
+    opacity: 0.9;
+  }
+  [data-md-color-scheme="slate"] .oneclip-announcement-item {
+    border-bottom-color: rgba(81, 143, 193, 0.1);
+  }
+}
+
+.oneclip-announcement a {
+  color: var(--md-primary-fg-color, #518FC1) !important;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  font-weight: 500;
+}
+
+.oneclip-announcement a:hover {
+  opacity: 0.7;
+}
+
+.oneclip-cta {
+  margin-left: 8px;
+  text-decoration: none !important;
+  display: inline;
+}
+
+/* 隐藏右侧目录滚动条，保留滚动功能 */
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE/Edge */
+}
+
+/* 友链页面：一键复制本站信息 */
+.friend-info-copy {
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(96, 141, 189, 0.2);
+  background: linear-gradient(135deg, rgba(96, 141, 189, 0.04), rgba(96, 141, 189, 0.02));
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.friend-info-row {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.friend-info-label {
+  min-width: 5.5rem;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color);
+}
+
+.friend-info-input {
+  flex: 1;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.friend-info-input:focus {
+  outline: none;
+  border-color: #608DBD;
+  box-shadow: 0 0 0 1px rgba(96, 141, 189, 0.35);
+}
+
+.friend-info-copy-btn {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #608DBD;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.friend-info-copy-btn:hover:not(.friend-info-copy-btn--copied) {
+  background-color: #4b76a5;
+  transform: translateY(-0.5px);
+}
+
+.friend-info-copy-btn:active:not(.friend-info-copy-btn--copied) {
+  transform: translateY(0);
+}
+
+/* 复制成功状态 */
+.friend-info-copy-btn--copied {
+  background-color: #e3f7e9;
+  color: #1a7f3b;
+  box-shadow: 0 0 0 1px rgba(56, 142, 60, 0.2);
+}
+
+@media (max-width: 600px) {
+  .friend-info-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .friend-info-copy {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .friend-info-label {
+    min-width: auto;
+  }
+
+  .friend-info-copy-btn {
+    /* 移动端直接隐藏复制按钮，避免布局挤压 */
+    display: none;
+  }
+}
+
+/* 本文作者头像：悬浮轻微放大 + 显示名字 popover */
+img.author-avatar {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+img.author-avatar:hover {
+  transform: scale(1.15);
+}
+
+/* 作者头像容器 */
+.author-avatar-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* 作者名字 popover */
+.author-name-popover {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* popover 箭头 */
+.author-name-popover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: rgba(30, 30, 30, 0.95) transparent transparent transparent;
+}
+
+/* 悬停时显示 popover */
+.author-avatar-wrapper:hover .author-name-popover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* 暗色模式适配 */
+[data-md-color-scheme="slate"] .author-name-popover {
+  background: rgba(17, 24, 39, 0.95);
+}
+
+[data-md-color-scheme="slate"] .author-name-popover::after {
+  border-color: rgba(17, 24, 39, 0.95) transparent transparent transparent;
+}
+
+
+
+
+/* 目录导航的缩进参考线：仅二级及以上目录显示 */
+nav.md-nav--secondary ul ul {
+  border-left: 1px solid #B0B4BA;
+}
+
+/* 表格圆角与裁剪溢出（不带自定义 class 的标准表格） */
+.md-typeset table:not([class]) {
+  border-radius: 0.75rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+/* 移动端隐藏侧边栏按钮 */
+@media screen and (max-width: 768px) {
+  .md-sidebar-button {
+    display: none !important;
+  }
+}
+
+/* 修复代码块高亮行横向滚动时背景不全的问题
+ * 
+ * 原始主题意图：.hll 作为 block，背景覆盖整行
+ * 问题：code 容器宽度固定，block 的 100% 宽度无法延伸到滚动区域
+ * 
+ * 解决方案：让 code 宽度等于内容实际宽度，hll 自然随之扩展
+ */
+
+/* pre 负责滚动 */
+.md-typeset .highlight pre,
+.md-typeset pre {
+  overflow-x: auto;
+}
+
+/* code 宽度等于内容实际宽度 */
+.md-typeset pre > code {
+  display: inline-block !important;
+  min-width: 100%;
+  /* 消除 inline-block 底部间隙 */
+  vertical-align: top;
+}
+
+/* hll 作为 block 填满 code 宽度，背景覆盖整行 */
+.md-typeset .highlight .hll,
+.md-typeset pre code .hll {
+  display: block !important;
+}

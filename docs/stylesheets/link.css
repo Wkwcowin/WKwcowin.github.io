@@ -1,0 +1,137 @@
+/* 链接导航容器 - 使用 CSS Grid 实现响应式布局 */
+.link-navigation {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 1rem;
+   width: 100%;
+}
+
+/* 用于大屏幕和小屏幕的通用样式 */
+.card {
+   width: 100%;
+   height: 90px;
+   font-size: 1rem;
+   padding: 10px 20px;
+   border-radius: 25px;
+   -webkit-transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+               box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+   transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), 
+               box-shadow 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); /* 使用更高效的过渡 */
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+   align-items: center;
+   color: #333;
+   contain: layout style; /* 性能优化：限制重绘范围 */
+   will-change: transform; /* 提前告知浏览器变换意图 */
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden; /* 减少复合层 */
+   -webkit-transform: translateZ(0);
+   transform: translateZ(0); /* 强制GPU加速 */
+   box-sizing: border-box;
+}
+
+/* 移除旧的 float 布局 */
+.card:nth-child(odd),
+.card:nth-child(even) {
+   float: none;
+}
+
+/* 在大屏幕上保留悬停效果 */
+.card:hover {
+   -webkit-transform: translateZ(0) scale(1.05);
+   transform: translateZ(0) scale(1.05);
+   box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+   background-color: rgba(68, 138, 255, 0.1);
+}
+
+.card a {
+   border: none;
+}
+
+.card .ava {
+   width: 3rem !important;
+   height: 3rem !important;
+   margin: 0 1em 0 0 !important;
+   border-radius: 50%;
+   object-fit: cover; /* 确保图像正确填充 */
+   aspect-ratio: 1 / 1; /* 防止布局抖动(CLS) */
+   background-color: #e8eaed; /* 加载中/失败时的占位背景色 */
+   transition: opacity 0.3s;
+}
+
+/* 头像加载失败时的样式 */
+.card .ava.ava-fallback {
+   background-color: #d0d7de;
+}
+
+.card .card-header {
+   font-style: italic;
+   overflow: hidden;
+   width: auto;
+}
+
+.card .card-header a {
+   font-style: normal;
+   color: #608DBD;
+   font-weight: bold;
+   text-decoration: none;
+}
+
+/* 使用更高效的选择器 */
+.card-header a:hover {
+   color: #d480aa;
+}
+
+.card .card-header .info {
+   font-style: normal;
+   color: #706f6f;
+   font-size: 14px;
+   overflow: hidden;
+   text-overflow: ellipsis; /* 文本溢出时显示省略号 */
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* 限制最多显示两行 */
+   line-clamp: 2; /* 标准属性以实现兼容性 */
+   -webkit-box-orient: vertical;
+   box-orient: vertical;
+}
+
+/* 媒体查询：小屏幕 */
+@media (max-width: 768px) {
+   .link-navigation {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+   }
+   
+   .card {
+      width: 100%;
+      height: auto;
+      min-height: 70px;
+      padding: 8px 12px;
+      contain: content;
+   }
+   
+   .card .ava {
+      width: 2.5rem !important;
+      height: 2.5rem !important;
+      margin: 0 0.75em 0 0 !important;
+   }
+   
+   .card .card-header .info {
+      font-size: 12px;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+   }
+}
+
+/* 使用更高效的清除浮动方法 */
+.markdown-content {
+   display: flow-root; /* 现代清除浮动方法 */
+}
+
+.markdown-content h2 {
+   font-size: 1.5rem;
+   color: #333;
+}
