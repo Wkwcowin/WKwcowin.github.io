@@ -13,7 +13,7 @@ copyright = "Copyright &copy; 2022~2026 Wcowin" # 左下角的版权声明
 docs_dir = "docs"                                # 文档目录
 site_dir = "site"                                # 生成的网站目录
 use_directory_urls = true                        # 使用目录形式的URL (例如: /page/ 而不是 /page.html)
-# validation = false
+validation = false
 
 # ===== 仓库配置 =====
 repo_url = "https://github.com/Wkwcowin/WKwcowin.github.io"  # 右上角点击跳转的链接
@@ -210,13 +210,11 @@ nav = [
         "develop/index.md",
         { "AI" = [
             "develop/AI/index.md",
-            { "AI工具(2026最新)" = "develop/AItools.md" },
             { "Prompt 工程入门" = "develop/AI/prompt.md" },
             { "上下文工程（Context Engineering）" = "develop/AI/context-engineering.md" },
             { "AI Agent 入门" = "develop/AI/agent.md" },
             { "Agentic AI：从 Chatbot 到可行动的智能体" = "develop/AI/agentic-ai.md" },
-            { "具身智能：当 AI 拥有身体，物理世界迎来新纪元" = "develop/AI/embodied-ai.md" },
-            { "JEPA：联合嵌入预测架构——通往世界模型的非生成之路" = "develop/AI/jepa.md" },
+            { "AI Agent 记忆系统深度解析" = "develop/AI/memory-system.md" },
             { "What is MCP" = "develop/AI/mcp.md" },
             { "A2A 协议（Agent-to-Agent）" = "develop/AI/a2a.md" },
             { "RAG技术(检索增强生成)" = "develop/AI/rag.md" },
@@ -224,13 +222,16 @@ nav = [
             { "多智能体协作入门" = "develop/AI/multi-agent.md" },
             { "深度推理与测试时计算" = "develop/AI/deep-reasoning.md" },
             { "AI 安全与对抗" = "develop/AI/ai-security.md" },
+            { "具身智能：当 AI 拥有身体，物理世界迎来新纪元" = "develop/AI/embodied-ai.md" },
+            { "JEPA：联合嵌入预测架构——通往世界模型的非生成之路" = "develop/AI/jepa.md" },
             { "Attention Residuals：Kimi架构创新" = "develop/AI/attention-residuals.md" },
             { "Claude Code指南" = "develop/Claude-Code.md" },
             { "Codex指南" = "develop/ChatGPT.md" },
             { "CC Switch：Claude Code / Codex 模型切换工具" = "develop/AI/cc-switch.md" },
             { "OpenClaw：本地开源AI助手" = "develop/AI/openclaw.md" },
             { "Hermes Agent：自进化的 AI Agent" = "develop/AI/hermes-agent.md" },
-            { "nanobot：超轻量级 AI 助手" = "develop/AI/nanobot.md" }
+            { "nanobot：超轻量级 AI 助手" = "develop/AI/nanobot.md" },
+            { "AI工具(2026最新)" = "develop/AItools.md" }
         ]},
         { "Python 环境管理最佳实践" = "develop/environment.md" },
         { "Anaconda 使用教程" = "develop/Anaconda.md" },

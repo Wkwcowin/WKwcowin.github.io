@@ -908,6 +908,7 @@ hr {
     - [多智能体协作入门](develop/AI/multi-agent.md)、[Prompt 工程入门](develop/AI/prompt.md)
     - [A2A 协议](develop/AI/a2a.md)、[AI 安全与对抗](develop/AI/ai-security.md)
     - [JEPA-通往世界模型的非生成之路](develop/AI/jepa.md)
+    - [AI Agent 记忆系统深度解析](develop/AI/memory-system.md)「2026/6/23最新」
 
 -   :material-account-box-outline:{ .lg .middle } __关于__
 
@@ -916,7 +917,7 @@ hr {
     - [留言板](waline.md)
     - [我的开发项目/作品/应用](develop/Mywork/index.md)
     - [:octicons-arrow-right-24: 了解我](about/geren/#_4){ data-preview }
-    - [支持作者](about/zcw/#alipay){ data-preview }
+    - [支持作者](about/zcw/)
 </div>
 
 

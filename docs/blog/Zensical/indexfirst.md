@@ -15,7 +15,7 @@ tags:
     ---  
 
     - 入门 Zensical  请看[Zensical官方教程](https://zensical.org/){target=“_blank”}  
-    - 我写的中文教程：[Zensical中文教程](https://wcowin.github.io/Zensical-Chinese-Tutorial/){target=“_blank”}
+    - 我写的中文教程：[Zensical中文教程](https://wcowin.work/Zensical-Chinese-Tutorial/){target=“_blank”}
     - 目前 Zensical 还在开发中，本站已经使用 Zensical 构建
 </div>
 
@@ -33,7 +33,7 @@ tags:
 
     ---
 
-    - 在构建网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/blog/Zensical/indexfirst/)
+    - 在构建网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/Zensical-Chinese-Tutorial/)
 
 </div>
 
@@ -44,7 +44,7 @@ tags:
 
     ---
 
-    - 在构建本网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/blog/Zensical/indexfirst/)
+    - 在构建本网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/Zensical-Chinese-Tutorial/)
 
 </div>
 ```
