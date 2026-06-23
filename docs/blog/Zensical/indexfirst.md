@@ -33,7 +33,7 @@ tags:
 
     ---
 
-    - 在构建网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/blog/zensical/indexfirst/)
+    - 在构建网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/blog/Zensical/indexfirst/)
 
 </div>
 
@@ -44,7 +44,7 @@ tags:
 
     ---
 
-    - 在构建本网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/blog/zensical/indexfirst/)
+    - 在构建本网站的过程中参考了[Wcowin同学的Zensical 教程](https://wcowin.work/blog/Zensical/indexfirst/)
 
 </div>
 ```

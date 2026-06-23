@@ -2185,19 +2185,52 @@ document.addEventListener("DOMContentLoaded", function() {
  </script> -->
 
 
-<script src="https://giscus.app/client.js"
-        data-repo="Wkwcowin/Comment"
-        data-repo-id="R_kgDOS6WZ6Q"
-        data-category="General"
-        data-category-id="DIC_kwDOS6WZ6c4C_Ik1"
-        data-mapping="pathname"
-        data-strict="1"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
+<!-- 动态加载 Giscus，根据网站主题设置初始主题 -->
+<script>
+(function() {
+  var scheme = document.body.getAttribute("data-md-color-scheme");
+  var theme = scheme === "slate" ? "dark" : "light";
+  var giscusScript = document.createElement("script");
+  giscusScript.src = "https://giscus.app/client.js";
+  giscusScript.setAttribute("data-repo", "Wkwcowin/Comment");
+  giscusScript.setAttribute("data-repo-id", "R_kgDOS6WZ6Q");
+  giscusScript.setAttribute("data-category", "General");
+  giscusScript.setAttribute("data-category-id", "DIC_kwDOS6WZ6c4C_Ik1");
+  giscusScript.setAttribute("data-mapping", "pathname");
+  giscusScript.setAttribute("data-strict", "1");
+  giscusScript.setAttribute("data-reactions-enabled", "1");
+  giscusScript.setAttribute("data-emit-metadata", "0");
+  giscusScript.setAttribute("data-input-position", "top");
+  giscusScript.setAttribute("data-theme", theme);
+  giscusScript.setAttribute("data-lang", "zh-CN");
+  giscusScript.setAttribute("data-loading", "lazy");
+  giscusScript.setAttribute("crossorigin", "anonymous");
+  giscusScript.async = true;
+  document.currentScript.parentNode.insertBefore(giscusScript, document.currentScript.nextSibling);
+})();
+</script>
+
+<!-- 同步 Giscus 主题与网站主题 -->
+<script>
+function syncGiscusTheme() {
+  var scheme = document.body.getAttribute("data-md-color-scheme");
+  var theme = scheme === "slate" ? "dark" : "light";
+  var frame = document.querySelector(".giscus-frame");
+  if (frame && frame.contentWindow) {
+    frame.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme } } },
+      "https://giscus.app"
+    );
+  }
+}
+document.addEventListener("DOMContentLoaded", function() {
+  var bodyObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === "data-md-color-scheme") {
+        syncGiscusTheme();
+      }
+    });
+  });
+  bodyObserver.observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
+});
 </script>

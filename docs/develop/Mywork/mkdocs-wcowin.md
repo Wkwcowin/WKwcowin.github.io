@@ -91,11 +91,11 @@ tags:
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Wcowin/Mkdocs-Wcowin&type=Date)](https://www.star-history.com/#Wcowin/Mkdocs-Wcowin&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Wkwcowin/Mkdocs-Wcowin&type=Date)](https://www.star-history.com/#Wkwcowin/Mkdocs-Wcowin&Date)
 
 ## 贡献者
-<a href="https://github.com/Wcowin/Mkdocs-Wcowin/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Wcowin/Mkdocs-Wcowin" />
+<a href="https://github.com/Wkwcowin/Mkdocs-Wcowin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Wkwcowin/Mkdocs-Wcowin" />
 </a>
 
 [![Built with Material for MkDocs](https://img.shields.io/badge/Material_for_MkDocs-526CFE?style=for-the-badge&logo=MaterialForMkDocs&logoColor=white)](https://squidfunk.github.io/mkdocs-material/)

@@ -18,7 +18,7 @@ title: 添加 GitHub 仓库卡片
   <a
     class="github-repo-card"
     data-repo="Wcowin/OneClip"
-    href="https://github.com/Wcowin/OneClip"
+    href="https://github.com/Wkwcowin/OneClip"
     target="_blank"
     rel="noopener noreferrer"
   ></a>
@@ -39,7 +39,7 @@ title: 添加 GitHub 仓库卡片
   <a
     id="oneclip-github-card"
     class="github-repo-card"
-    href="https://github.com/Wcowin/OneClip"
+    href="https://github.com/Wkwcowin/OneClip"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -440,7 +440,7 @@ title: 添加 GitHub 仓库卡片
     data-stars="123"
     data-forks="45"
     data-license="MIT"
-    href="https://github.com/Wcowin/OneClip"
+    href="https://github.com/Wkwcowin/OneClip"
     target="_blank"
     rel="noopener noreferrer"
   ></a>
@@ -454,4 +454,3 @@ title: 添加 GitHub 仓库卡片
 - 当设置 `data-license` 为空字符串时，许可证项会被自动隐藏
 - 即使 GitHub API 请求失败，自定义属性也会正常显示
 - 缓存会在2小时后自动刷新，确保数据保持最新
-

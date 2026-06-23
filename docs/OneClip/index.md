@@ -68,7 +68,7 @@ OneClip 是一款简单专业的 macOS 剪贴板管理工具。
 ## 相关链接
 
 - [OneClip 介绍](/blog/OneClip/)
-- [GitHub 仓库](https://github.com/Wcowin/OneClip)
+- [GitHub 仓库](https://github.com/One-Clip/OneClip)
 - [Gitee 仓库](https://gitee.com/Wcowin/OneClip)
 - [OneClip API 用户指南](OneClip_API.md)
 

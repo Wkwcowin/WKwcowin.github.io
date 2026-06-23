@@ -542,7 +542,7 @@ cat > "$RELEASE_DIR/appcast.xml" << EOF
       <title>Version $VERSION</title>
       <sparkle:version>$VERSION</sparkle:version>
       <sparkle:shortVersionString>$VERSION</sparkle:shortVersionString>
-      <link>https://github.com/Wcowin/OneClip/releases</link>
+      <link>https://github.com/Wkwcowin/OneClip/releases</link>
       <description>$APP_NAME $VERSION 更新</description>
       <pubDate>$PUB_DATE</pubDate>
       <enclosure url="https://github.com/Wcowin/OneClip/releases/download/v$VERSION/$APP_NAME-$VERSION.dmg"

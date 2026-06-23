@@ -357,7 +357,7 @@ flowchart TB
 
 ```bash
 # 克隆仓库
-git clone https://github.com/Wcowin/OneClip.git
+git clone https://github.com/Wkwcowin/OneClip.git
 cd OneClip/src
 
 # 构建
@@ -522,7 +522,7 @@ open dist/OneClip.app
   <h3>Wcowin</h3>
   <p>
     <a href="https://wcowin.work/blog/Mac/sunhuai/"> 博客</a> |
-    <a href="https://github.com/Wcowin"> GitHub</a> |
+    <a href="https://github.com/Wkwcowin"> GitHub</a> |
     <a href="mailto:vip@oneclip.cloud"> 邮箱</a>
   </p>
 </div>

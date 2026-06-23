@@ -185,6 +185,6 @@ Apache 2.0 (遵循 PaddleOCR 开源协议)
 - [RapidOCR 文档](https://rapidai.github.io/RapidOCRDocs/)
 - [ONNX Runtime](https://onnxruntime.ai/)
 
-**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wcowin)  
+**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wkwcowin)  
 
 未经允许不得转载😀

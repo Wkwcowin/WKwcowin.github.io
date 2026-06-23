@@ -244,7 +244,7 @@ status: new
         <span class="about__info-name">实习经验</span>
     </div>
     <div>
-        <a href="https://github.com/Wcowin" target="_blank">
+        <a href="https://github.com/Wkwcowin" target="_blank">
             <span class="about__info-title">5项+</span>
             <span class="about__info-name">完成的项目</span>
         </a>
@@ -254,7 +254,7 @@ status: new
         <span class="about__info-name">贡献的开源</span>
     </div>
     <div>
-        <a href="https://github.com/Wcowin/OneClip" target="_blank">
+        <a href="https://github.com/Wkwcowin/OneClip" target="_blank">
             <span class="about__info-title">2+</span>
             <span class="about__info-name">独立开发软件</span>
         </a>
@@ -265,7 +265,7 @@ status: new
 <!-- <div class="github-repo-card-wrapper">
   <a
     class="github-repo-card"
-    data-repo="Wcowin/OneClip"
+    data-repo="Wkwcowin/OneClip"
     data-avatar="https://pic4.zhimg.com/100/v2-2c2935c381364513e278726841d93afb_r.jpg"
     href="https://github.com/Wcowin/OneClip"
     target="_blank"
@@ -286,7 +286,7 @@ status: new
     data-stars="342"
     data-forks="15"
     data-license="MIT"
-    href="https://github.com/Wcowin/OneClip"
+    href="https://github.com/One-Clip/OneClip"
     target="_blank"
     rel="noopener noreferrer"
   ></a>
@@ -301,13 +301,13 @@ status: new
     data-forks="0"
     data-license="MIT"
     data-avatar="https://pic4.zhimg.com/100/v2-2c2935c381364513e278726841d93afb_r.jpg"
-    href="https://github.com/Wcowin/Mac-Finder-Clipboard"
+    href="https://github.com/Wkwcowin/Mac-Finder-Clipboard"
     target="_blank"
     rel="noopener noreferrer"
   ></a>
 </div>
 
-<div class="github-repo-card-wrapper">
+<!--<div class="github-repo-card-wrapper">
   <a
     class="github-repo-card"
     data-repo="Wcowin/Wcowin.github.io"
@@ -320,7 +320,7 @@ status: new
     target="_blank"
     rel="noopener noreferrer"
   ></a>
-</div>
+</div>-->
 
 <div class="github-repo-card-wrapper">
   <a
@@ -331,7 +331,7 @@ status: new
     data-forks="5"
     data-license="MIT"
     data-avatar="https://pic4.zhimg.com/100/v2-2c2935c381364513e278726841d93afb_r.jpg"
-    href="https://github.com/Wcowin/Mkdocs-Wcowin"
+    href="https://github.com/Wkwcowin/Mkdocs-Wcowin"
     target="_blank"
     rel="noopener noreferrer"
   ></a>
@@ -346,7 +346,7 @@ status: new
     data-forks="10"
     data-license="MIT"
     data-avatar="https://pic4.zhimg.com/100/v2-2c2935c381364513e278726841d93afb_r.jpg"
-    href="https://github.com/Wcowin/Wcowin.github.io"
+    href="https://github.com/Wkwcowin/WKwcowin.github.io"
     target="_blank"
     rel="noopener noreferrer"
   ></a>
@@ -476,7 +476,7 @@ status: new
             <div class="qualification__data">
                 <div>
                     <h3 class="qualification__title">独立开发者</h3>
-                    <span class="qualification__subtitle">Swift开发/<a href="https://github.com/Wcowin/OneClip" target="_blank" style="color: inherit; text-decoration: underline;">OneClip</a> 作者</span>
+                    <span class="qualification__subtitle">Swift开发/<a href="https://github.com/One-Clip/OneClip" target="_blank" style="color: inherit; text-decoration: underline;">OneClip</a> 作者</span>
                     <div class="qualification__calendar">
                         <i class="fa-regular fa-calendar"></i>
                         <span>2025-至今</span>
@@ -702,7 +702,7 @@ status: new
 !!! quote "Who am I?"
     <div style="font-size: 1.3em;">
     
-    - Hi, I'm [Wcowin](https://github.com/Wcowin){target="_blank"}~
+    - Hi, I'm [Wcowin](https://github.com/Wkwcowin){target="_blank"}~
     - 咖啡重度爱好者
     - 热爱(xiā)研究/Math业余，致力于Mkdocs/Zensical静态网站以及[Mac应用](../develop/Mac-development/index.md)的开发
     - 目前的研究领域是[低空技术](../research/aerotech/)、[AI/大模型/具身智能](../develop/AI)、[密码学/区块链](../blog/Cryptography/index.md)
@@ -906,7 +906,7 @@ status: new
 
 !!! note "与我联系"
     <div style="font-size: 1.2em;">
-    如果你在浏览博客的过程中发现了任何问题，欢迎前往 GitHub 的[代码仓库](https://github.com/Wcowin/Wcowin.github.io)提交 [Issues](https://github.com/Wcowin/Wcowin.github.io/issues) ，最好Wechat/TG或者邮箱联系。如果你有其他事情想要咨询，可以通过下方按钮使用邮件联系我,请不要滥用博客的评论功能发表与主题无关言论。
+    如果你在浏览博客的过程中发现了任何问题，欢迎前往 GitHub 的[代码仓库](https://github.com/Wkwcowin/WKwcowin.github.io)提交 [Issues](https://github.com/WKwcowin/WKwcowin.github.io/issues) ，最好Wechat/TG或者邮箱联系。如果你有其他事情想要咨询，可以通过下方按钮使用邮件联系我,请不要滥用博客的评论功能发表与主题无关言论。
     </div>
 
     ---
