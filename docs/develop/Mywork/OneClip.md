@@ -32,7 +32,7 @@ tags:
   <img src="https://img.shields.io/badge/macOS-12%2B-0f172a?style=for-the-badge&logo=apple&logoColor=white" alt="macOS 12+" />
   <img src="https://img.shields.io/badge/Swift-5.9%2B-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift 5.9+" />
   <img src="https://img.shields.io/badge/Privacy-Local%20Storage-green?style=for-the-badge" alt="Privacy Local Storage" />
-  <a href="https://github.com/Wcowin/OneClip/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License" /></a>
+  <a href="https://github.com/Wkwcowin/OneClip/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License" /></a>
 </p>
 
 
@@ -358,7 +358,7 @@ flowchart TB
 
 ```bash
 # 克隆仓库
-git clone https://github.com/Wcowin/OneClip.git
+git clone https://github.com/Wkwcowin/OneClip.git
 cd OneClip/src
 
 # 构建

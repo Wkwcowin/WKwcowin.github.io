@@ -415,7 +415,7 @@ title: 添加 GitHub 仓库卡片
    - `oneclip-avatar` → `foo-bar-avatar`
    - `oneclip-stars` / `oneclip-forks` / `oneclip-license` → 对应新 id
    - `Wcowin` / `OneClip` → 仓库实际所有者和名称
-   - `https://api.github.com/repos/Wcowin/OneClip` / `https://github.com/Wcowin/OneClip` → 你的仓库地址
+   - `https://api.github.com/repos/Wcowin/OneClip` / `https://github.com/Wkwcowin/OneClip` → 你的仓库地址
 
 你也可以把这段实现抽到单独的 `partial` 或 JS 组件里，但对大多数文档站来说，直接在需要的位置嵌入这一小段就已经足够简洁实用。
 

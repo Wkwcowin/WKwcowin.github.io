@@ -253,7 +253,22 @@
   }
 }
 
-/* 本文作者头像：悬浮轻微放大 + 显示名字 popover */
+/* ============================================
+   本文作者头像：悬浮轻微放大 + Transitions.dev Tooltip
+   ============================================ */
+
+/* Tooltip 动画变量 */
+:root {
+  --author-tt-in-dur: 150ms;
+  --author-tt-out-dur: 50ms;
+  --author-tt-scale: 0.98;
+  --author-tt-delay: 80ms;
+  --author-tt-in-ease: ease-out;
+  --author-tt-out-ease: ease-out;
+  --author-tt-bg: #ffffff;
+  --author-tt-fg: #2f2f2f;
+}
+
 img.author-avatar {
   width: 28px;
   height: 28px;
@@ -272,55 +287,49 @@ img.author-avatar:hover {
   display: inline-block;
 }
 
-/* 作者名字 popover */
+/* 作者名字 popover - Transitions.dev 样式 */
 .author-name-popover {
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%) translateY(-8px);
-  background: rgba(30, 30, 30, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #fff;
-  padding: 6px 12px;
+  transform: translate(-50%, 0) scale(var(--author-tt-scale));
+  transform-origin: 50% 100%;
+  padding: 8px 12px;
   border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 500;
+  background: var(--author-tt-bg);
+  color: var(--author-tt-fg);
   white-space: nowrap;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 2px 6px 0 rgba(0, 0, 0, 0.05),
+    0 4px 42px 0 rgba(0, 0, 0, 0.06);
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
   pointer-events: none;
-  z-index: 1000;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  font-size: 0.85rem;
+  font-weight: 500;
+  /* 离开动画：无延迟，立即消失 */
+  transition:
+    opacity   var(--author-tt-out-dur) var(--author-tt-out-ease),
+    transform var(--author-tt-out-dur) var(--author-tt-out-ease);
 }
 
-/* popover 箭头 */
-.author-name-popover::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 6px 6px 0 6px;
-  border-style: solid;
-  border-color: rgba(30, 30, 30, 0.95) transparent transparent transparent;
-}
-
-/* 悬停时显示 popover */
+/* 悬停/聚焦时显示 - 进入动画带延迟 */
 .author-avatar-wrapper:hover .author-name-popover {
   opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(-4px);
+  transform: translate(-50%, 0) scale(1);
+  transition-duration: var(--author-tt-in-dur);
+  transition-timing-function: var(--author-tt-in-ease);
+  transition-delay: var(--author-tt-delay);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .author-name-popover { transition: none !important; }
 }
 
 /* 暗色模式适配 */
-[data-md-color-scheme="slate"] .author-name-popover {
-  background: rgba(17, 24, 39, 0.95);
-}
-
-[data-md-color-scheme="slate"] .author-name-popover::after {
-  border-color: rgba(17, 24, 39, 0.95) transparent transparent transparent;
+[data-md-color-scheme="slate"] {
+  --author-tt-bg: #1f2937;
+  --author-tt-fg: #f3f4f6;
 }
 
 

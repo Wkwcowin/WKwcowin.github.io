@@ -594,10 +594,10 @@ pip install -r requirements.txt
 </p>
 
 <p align="center">
-    <a href="https://github.com/Wcowin/mkdocs-ai-hooks/stargazers">
+    <a href="https://github.com/Wkwcowin/mkdocs-ai-hooks/stargazers">
         <img src="https://img.shields.io/github/stars/Wcowin/mkdocs-ai-hooks?style=social" alt="Stars">
     </a>
-    <a href="https://github.com/Wcowin/mkdocs-ai-hooks/network/members">
+    <a href="https://github.com/Wkwcowin/mkdocs-ai-hooks/network/members">
         <img src="https://img.shields.io/github/forks/Wcowin/mkdocs-ai-hooks?style=social" alt="Forks">
     </a>
 </p>
