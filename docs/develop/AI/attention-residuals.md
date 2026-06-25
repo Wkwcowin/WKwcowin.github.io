@@ -386,9 +386,9 @@ Attention Residuals 是 2026 年很值得关注的一项架构创新。它：
 
     ---
 
-    <iframe src="../Attention_Residuals.pdf" width="100%" height="800px" style="border: 1.5px solid #ccc; overflow: auto; border-radius: 18px; background: #fff;"></iframe>
+    <iframe src="Attention_Residuals.pdf" width="100%" height="800px" style="border: 1.5px solid #ccc; overflow: auto; border-radius: 18px; background: #fff;"></iframe>
     <center>
-    [:material-download: 下载PDF](../AI/Attention_Residuals.pdf){ .md-button}
+    [:material-download: 下载PDF](Attention_Residuals.pdf){ .md-button}
     </center>
     
 </div>

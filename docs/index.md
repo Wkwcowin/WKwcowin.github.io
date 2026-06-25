@@ -102,8 +102,8 @@ hide:
     <div class="flip-glow-ultimate">
       <div class="flip-glow-ultimate-glow"></div>
       <div class="flip-glow-ultimate-imgs">
-        <img src="https://pic4.zhimg.com/100/v2-2c2935c381364513e278726841d93afb_r.jpg" alt="Wcowin头像背面" class="flip-glow-ultimate-front" loading="eager" fetchpriority="high" width="280" height="280">
-        <img src="https://pic2.zhimg.com/100/v2-d6a47de28a761522a8e07ac3b5bd458d_r.jpg" alt="Wcowin头像正面" class="flip-glow-ultimate-back" loading="lazy" width="280" height="280">
+        <img src="https://pic4.zhimg.com/100/v2-2c2935c381364513e278726841d93afb_r.jpg" alt="Wcowin头像背面" class="flip-glow-ultimate-front" loading="eager" fetchpriority="high" width="260" height="260">
+        <img src="https://pic2.zhimg.com/100/v2-d6a47de28a761522a8e07ac3b5bd458d_r.jpg" alt="Wcowin头像正面" class="flip-glow-ultimate-back" loading="lazy" width="260" height="260">
       </div>
     </div>
   </div>
@@ -312,13 +312,13 @@ hide:
   align-items: center;
   justify-content: center;
   min-width: 240px;
-  flex: 0 0 280px;
+  flex: 0 0 260px;
 }
 
 .flip-glow-ultimate {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -414,7 +414,7 @@ hide:
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 260px; height: 260px;
+  width: 240px; height: 240px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -449,8 +449,8 @@ hide:
 
 .flip-glow-ultimate-imgs {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   overflow: hidden;
   perspective: 1200px;
@@ -575,18 +575,13 @@ hide:
   const phrasesData = {
     chinese_simplified: [
       "A Swift Developer",
+      "A graduate student",
       "A dreamer"
     ],
     english: [
       "A Swift Developer",
+      "A graduate student",
       "A dreamer",
-      "Through hardship to the stars"
-    ],
-    japanese: [
-      "A college student",
-      "A developer",
-      "A dreamer",
-      "苦難を経て星へ"
     ]
   };
   
@@ -702,7 +697,7 @@ hr {
 <style>
   .greeting-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     padding: 15px;
     border-radius: 10px;
     background-color: rgba(240, 240, 240, 0.5);
@@ -735,7 +730,7 @@ hr {
   @media (max-width: 768px) {
     .greeting-container {
       padding: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 6px;
     }
 
     .greeting-text {

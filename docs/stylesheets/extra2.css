@@ -29,9 +29,10 @@
   padding: 10px 20px;
   margin: -20px auto 50px auto;
   border-radius: 20px;
-  max-width: 600px;
+  /* 使用 clamp 让宽度随视口平滑变化：最小600px，理想90%，最大1200px */
+  width: clamp(600px, 90%, 1200px);
   position: relative;
-  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, margin 0.3s ease, padding 0.3s ease, width 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* 公告栏关闭按钮 */
@@ -79,13 +80,6 @@
   pointer-events: none;
 }
 
-/* 电脑端加宽公告栏，避免第三行换行 */
-@media (min-width: 768px) {
-  .oneclip-announcement {
-    max-width: 1200px;
-  }
-}
-
 /* 暗色模式适配 */
 [data-md-color-scheme="slate"] .oneclip-announcement {
   background: linear-gradient(135deg, rgba(81, 143, 193, 0.04) 0%, rgba(81, 143, 193, 0.02) 100%);
@@ -100,6 +94,7 @@
 /* 移动端：每条公告独立成块，分隔清晰、减少拥挤感 */
 @media (max-width: 767px) {
   .oneclip-announcement {
+    width: calc(100% - 16px);
     padding: 12px 36px 12px 14px;
     margin-left: 8px;
     margin-right: 8px;
