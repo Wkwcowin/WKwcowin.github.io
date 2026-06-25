@@ -13,7 +13,7 @@ copyright = "Copyright &copy; 2022~2026 Wcowin" # 左下角的版权声明
 docs_dir = "docs"                                # 文档目录
 site_dir = "site"                                # 生成的网站目录
 use_directory_urls = true                        # 使用目录形式的URL (例如: /page/ 而不是 /page.html)
-validation = false
+# validation = false
 
 # ===== 仓库配置 =====
 repo_url = "https://github.com/Wkwcowin/WKwcowin.github.io"  # 右上角点击跳转的链接

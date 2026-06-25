@@ -10,7 +10,7 @@ hide:
 
 
 <!-- OneClip 公告栏 -->
-<div class="oneclip-announcement" id="oneclip-announcement">
+<div class="oneclip-announcement t-resize" id="oneclip-announcement">
   <button class="oneclip-announcement-close" onclick="closeAnnouncement()" aria-label="关闭公告">
     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -19,7 +19,7 @@ hide:
   </button>
   <div class="oneclip-announcement-content">
     <div class="oneclip-announcement-item">
-      🎉 <a href="https://oneclip.cloud/" target="_blank" rel="noopener noreferrer">OneClip</a> —— 简单专业的 macOS 剪切板管理工具<a href="https://github.com/Wcowin/OneClip" target="_blank" rel="noopener noreferrer" class="oneclip-cta">了解更多 →</a>
+      🎉 <a href="https://oneclip.cloud/" target="_blank" rel="noopener noreferrer">OneClip</a> —— 简单专业的 macOS 剪切板管理工具<a href="https://github.com/One-Clip/OneClip" target="_blank" rel="noopener noreferrer" class="oneclip-cta">了解更多 →</a>
     </div>
     <div class="oneclip-announcement-item">
       ✈️ <a href="https://vpn07.com/index.html#/register?code=xWecG89k" target="_blank" rel="noopener noreferrer">好用机场</a> —— 季付低至22元|70+国家线路 千兆带宽|支持流媒体|8折优惠码：VPN07
@@ -30,9 +30,9 @@ hide:
     <div class="oneclip-announcement-item">
       🙌🏻 <a href="https://github.com/jaywhj/mkdocs-materialx" target="_blank" rel="noopener noreferrer">MaterialX</a> —— 下一代 MkDocs主题，让你继续用熟悉的方式构建漂亮文档
     </div>
-    <div class="oneclip-announcement-item">
+    <!-- <div class="oneclip-announcement-item">
       📱 <a href="https://api.simhaoka.com/?u=Wcowin" target="_blank" rel="noopener noreferrer">办电话卡</a> —— 月租低至29元｜Wcowin严选
-    </div>
+    </div> -->
   </div>
 </div>
 

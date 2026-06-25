@@ -3,6 +3,23 @@
   font-family: inherit !important;
 }
 
+/* ============================================
+   Transitions.dev — Card resize
+   卡片尺寸调整动画
+   ============================================ */
+.t-resize {
+  transition:
+    width  300ms cubic-bezier(0.22, 1, 0.36, 1),
+    height 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    max-width 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    max-height 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: width, height, max-width, max-height;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-resize { transition: none !important; }
+}
+
 /* OneClip 公告栏样式 - 简约设计 */
 .oneclip-announcement {
   background: linear-gradient(135deg, rgba(81, 143, 193, 0.06) 0%, rgba(81, 143, 193, 0.03) 100%);

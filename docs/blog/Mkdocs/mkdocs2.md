@@ -147,7 +147,7 @@ tags:
           link: https://t.me/wecowin
           name: telegram
         - icon: fontawesome/brands/x-twitter #联系方式图标 : https://fontawesome.com/ 去这里找图标
-          link: https://twitter.com/wcowin_
+          link: https://x.com/intent/follow?screen_name=kewen9694
         - icon: fontawesome/brands/github
           link: https://github.com/Wcowin
 
@@ -472,7 +472,7 @@ extra:
       link: https://t.me/wecowin
       name: telegram
     - icon: fontawesome/brands/x-twitter #联系方式图标 : https://fontawesome.com/ 去这里找图标
-      link: https://twitter.com/wcowin_
+      link: https://x.com/intent/follow?screen_name=kewen9694
     - icon: fontawesome/brands/github
       link: https://github.com/Wkwcowin
 

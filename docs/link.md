@@ -522,17 +522,6 @@ comments: false
     </div>
     </div>
     <div class="card">
-     <img class="ava" loading="lazy" decoding="async" src="https://i.p-i.vip/47/20240920-66ed7b168c38c.jpg" />
-     <div class="card-header">
-      <div>
-      <a href="https://vite.xingji.fun" target="_blank">XINGJI</a>
-      </div>
-      <div class="info">
-      迄今所有人生都大写着失败，但不妨碍我继续向前✨
-      </div>
-     </div>
-    </div>
-    <div class="card">
      <img class="ava" loading="lazy" decoding="async" src="https://shenwy.com/assets/logo.png" />
      <div class="card-header">
       <div>
@@ -947,17 +936,6 @@ comments: false
       </div>
     </div>
     <div class="card">
-      <img class="ava" loading="lazy" decoding="async" src="https://cdn.lusyoe.com/images/person.webp" />
-      <div class="card-header">
-        <div>
-          <a href="https://blog.lusyoe.com" target="_blank">青萍叙事</a>
-        </div>
-        <div class="info">
-          一个懂技术的产品汪🐶
-        </div>
-      </div>
-    </div>
-    <div class="card">
       <img class="ava" loading="lazy" decoding="async" src="https://www.biibii.cn/usr/uploads/2025/07/3155658037.webp" />
       <div class="card-header">
         <div>
@@ -989,17 +967,6 @@ comments: false
       Learn, Build, Share
       </div>
     </div>
-    </div>
-    <div class="card">
-      <img class="ava" loading="lazy" decoding="async" src="https://www.collaigo.com/assets/collagelogo-DJwLHSgZ.png" />
-      <div class="card-header">
-        <div>
-          <a href="https://collaigo.com" target="_blank">Collaigo</a>
-        </div>
-        <div class="info">
-          好用的免费在线拼图工具
-        </div>
-      </div>
     </div>
     <div class="card"> 
     <img class="ava" loading="lazy" decoding="async" src="https://avatars.githubusercontent.com/u/176311727?s=400&u=953f4d2a796d80a222e47435383aefddf0a94371&v=4" /> 
@@ -1317,7 +1284,7 @@ comments: false
       </div>  
     </div>
 <div class="card">
-        <img class="ava" loading="lazy" decoding="async" src="https://rdev.qzz.io/favicon.webp" />
+        <img class="ava" loading="lazy" decoding="async" src="https://s3.bmp.ovh/2026/06/12/MKCsE8LS.webp" />
         <div class="card-header">
           <div>
             <a href="https://vcblog.eu.cc/" target="_blank">维C博客</a>
@@ -1605,6 +1572,39 @@ comments: false
       </div>
       <div class="info">
        慈善义工在行动 （多次变动，且未加我方友链）
+      </div>
+     </div>
+    </div>
+    <div class="card">
+      <img class="ava" loading="lazy" decoding="async" src="https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp" />
+      <div class="card-header">
+        <div>
+          <a href="https://blog.lusyoe.com" target="_blank">青萍叙事(打不开)</a>
+        </div>
+        <div class="info">
+          一个懂技术的产品汪🐶
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="ava" loading="lazy" decoding="async" src="https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp" />
+      <div class="card-header">
+        <div>
+          <a href="https://collaigo.com" target="_blank">Collaigo(未加我方友链)</a>
+        </div>
+        <div class="info">
+          好用的免费在线拼图工具
+        </div>
+      </div>
+    </div>
+    <div class="card">
+     <img class="ava" loading="lazy" decoding="async" src="https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp" />
+     <div class="card-header">
+      <div>
+      <a href="https://vite.xingji.fun" target="_blank">XINGJI(打不开)</a>
+      </div>
+      <div class="info">
+      迄今所有人生都大写着失败，但不妨碍我继续向前✨
       </div>
      </div>
     </div>
@@ -2126,16 +2126,86 @@ async>
 </script>
 </head> -->
 
-<!-- 头像加载失败兜底 -->
+<!-- 头像加载失败兜底 + 骨架屏加载动画 -->
 <script>
-document.addEventListener('error', function(e) {
-  var img = e.target;
-  if (img && img.classList && img.classList.contains('ava') && !img.dataset.retried) {
-    img.dataset.retried = '1';
-    img.classList.add('ava-fallback');
-    img.src = "https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp";
+(function() {
+  // 头像加载失败兜底
+  document.addEventListener('error', function(e) {
+    var img = e.target;
+    if (img && img.classList && img.classList.contains('ava') && !img.dataset.retried) {
+      img.dataset.retried = '1';
+      img.classList.add('ava-fallback');
+      img.src = "https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp";
+    }
+  }, true);
+
+  // 骨架屏加载动画初始化
+  function initSkeletonLoader() {
+    var cards = document.querySelectorAll('.card');
+    
+    cards.forEach(function(card) {
+      // 如果卡片已经有骨架屏结构，跳过
+      if (card.querySelector('.card-skeleton')) return;
+      
+      // 获取原始内容
+      var originalContent = card.innerHTML;
+      var img = card.querySelector('.ava');
+      
+      // 添加加载中状态
+      card.classList.add('is-loading');
+      
+      // 构建骨架屏结构
+      var skeletonHTML = 
+        '<div class="card-skeleton">' +
+          '<div class="skel-avatar"></div>' +
+          '<div class="skel-text">' +
+            '<div class="skel-title"></div>' +
+            '<div class="skel-desc"></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="card-content">' + originalContent + '</div>';
+      
+      card.innerHTML = skeletonHTML;
+      
+      // 监听图片加载完成
+      var contentImg = card.querySelector('.card-content .ava');
+      if (contentImg) {
+        if (contentImg.complete) {
+          // 图片已缓存，直接显示
+          setTimeout(function() {
+            card.classList.remove('is-loading');
+            card.classList.add('is-loaded');
+          }, 300);
+        } else {
+          // 图片未加载，等待加载完成
+          contentImg.addEventListener('load', function() {
+            card.classList.remove('is-loading');
+            card.classList.add('is-loaded');
+          });
+          
+          // 超时处理（3秒后强制显示）
+          setTimeout(function() {
+            if (!card.classList.contains('is-loaded')) {
+              card.classList.remove('is-loading');
+              card.classList.add('is-loaded');
+            }
+          }, 3000);
+        }
+      } else {
+        // 没有图片，直接显示
+        card.classList.remove('is-loading');
+        card.classList.add('is-loaded');
+      }
+    });
   }
-}, true);
+
+  // DOM加载完成后初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSkeletonLoader);
+  } else {
+    initSkeletonLoader();
+  }
+})();
 </script>
 
 <!--

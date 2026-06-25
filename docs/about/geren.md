@@ -16,8 +16,11 @@ status: new
 
 <div class="intro-container">
   <div class="intro-content">
-    <div class="intro-avatar">
-      <img src="https://picx.zhimg.com/v2-fb22186d2490043435a72876950492f5_1440w.jpg" alt="Wáng Kēwén" class="avatar-img">
+    <div class="intro-avatar t-tilt">
+      <div class="t-tilt-card avatar-tilt-card">
+        <img src="https://picx.zhimg.com/v2-fb22186d2490043435a72876950492f5_1440w.jpg" alt="Wáng Kēwén" class="avatar-img">
+        <div class="t-tilt-glare"></div>
+      </div>
     </div>
     <div class="intro-text">
       <span class="greeting">你好，很高兴认识你 <span class="wave">👋</span></span>
@@ -47,18 +50,54 @@ status: new
   flex-shrink: 0;
 }
 
-.avatar-img {
+/* 3D 头像倾斜效果 */
+.avatar-tilt-card {
   width: 135px;
   height: 135px;
   border-radius: 50%;
+  overflow: hidden;
+  transform:
+    perspective(1000px)
+    rotateX(var(--tilt-rx, 0deg))
+    rotateY(var(--tilt-ry, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+  box-shadow: 0 8px 24px rgba(14, 30, 37, 0.15);
+}
+
+.avatar-tilt-card.is-tilting {
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.avatar-tilt-card .avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #ffffff;
   border: 4px solid #ffffff;
   box-shadow: 0 8px 24px rgba(14, 30, 37, 0.15);
   transition: transform 0.5s ease;
 }
 
-.avatar-img:hover {
-  transform: scale(1.05);
+.avatar-tilt-card .t-tilt-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: screen;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle 60px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
+      rgba(255,255,255,0.4), rgba(255,255,255,0.05) 52%, rgba(255,255,255,0) 84%),
+    radial-gradient(circle 120px at var(--tilt-gx, 50%) var(--tilt-gy, 50%),
+      rgba(255,255,255,0.2), rgba(255,255,255,0.03) 58%, rgba(255,255,255,0) 78%);
+  transition: opacity 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.t-tilt.is-hover .t-tilt-glare {
+  opacity: 0.32;
 }
 
 .intro-text {
@@ -122,7 +161,7 @@ status: new
   color: #DFDFDF;
 }
 
-[data-md-color-scheme="slate"] .avatar-img {
+[data-md-color-scheme="slate"] .avatar-tilt-card .avatar-img {
   border-color: rgba(255,255,255,0.2);
 }
 
@@ -139,7 +178,7 @@ status: new
     gap: 1.5rem;
   }
 
-  .avatar-img {
+  .avatar-tilt-card {
     width: 100px;
     height: 100px;
   }
@@ -254,7 +293,7 @@ status: new
         <span class="about__info-name">贡献的开源</span>
     </div>
     <div>
-        <a href="https://github.com/Wkwcowin/OneClip" target="_blank">
+        <a href="https://github.com/One-Clip/OneClip" target="_blank">
             <span class="about__info-title">2+</span>
             <span class="about__info-name">独立开发软件</span>
         </a>
@@ -272,8 +311,6 @@ status: new
     rel="noopener noreferrer"
   ></a>
 </div> -->
-
-<center>原来的<a href="https://github.com/Wcowin">GitHub账号</a>被封，暂时无法展示仓库👇🏻</center>
 
 <div class="github-repo-card-wrapper">
   <a
@@ -373,22 +410,90 @@ status: new
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wcowin/Wcowin.github.io@main/docs/about/sty/portfolio.css">
 
+<style>
+/* ============================================
+   Transitions.dev — Tabs sliding
+   滑动标签页效果
+   ============================================ */
+
+:root {
+  --tabs-dur: 250ms;
+  --tabs-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --tabs-text-muted: rgba(15, 15, 15, 0.8);
+  --tabs-text-active: #0f0f0f;
+  --tabs-bar-bg: #f1f1f1;
+  --tabs-pill-bg: #ffffff;
+}
+
+/* The bar is just a flex container with padding for the pill
+   to sit inside. Tabs sit on z-index: 1, the pill on z-index: 0,
+   so labels read above the pill background. */
+.t-tabs {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 48px;
+  background: var(--tabs-bar-bg);
+}
+.t-tab {
+  position: relative;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  height: 38px;
+  padding: 8px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--tabs-text-muted);
+  cursor: pointer;
+  border-radius: 48px;
+  z-index: 1;
+  transition: color var(--tabs-dur) var(--tabs-ease);
+  white-space: nowrap;
+}
+.t-tab:not([aria-selected="true"]):hover,
+.t-tab[aria-selected="true"] {
+  color: var(--tabs-text-active);
+}
+
+/* The pill: width + transform are written inline by JS so
+   the transition tweens between the previous and next
+   measured positions. */
+.t-tabs-pill {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 38px;
+  width: 0;
+  background: var(--tabs-pill-bg);
+  border-radius: 48px;
+  transform: translateX(0);
+  transition:
+    transform var(--tabs-dur) var(--tabs-ease),
+    width     var(--tabs-dur) var(--tabs-ease);
+  will-change: transform, width;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-tabs-pill, .t-tab { transition: none !important; }
+}
+</style>
+
 ## 我的履历
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <div class="qualification">
     <div class="qualification__tabs">
-        <label class="qualification__toggle qualification__slider-toggle">
-            <input type="checkbox" id="qualToggle" class="qualification__checkbox">
-            <span class="qualification__slider-track">
-                <span class="qualification__slider-thumb"></span>
-            </span>
-            <span class="qualification__options">
-                <span class="qualification__option option-left">来时路</span>
-                <span class="qualification__option option-right">工作经历</span>
-            </span>
-        </label>
+        <div class="t-tabs" role="tablist">
+            <span class="t-tabs-pill" aria-hidden="true"></span>
+            <button class="t-tab" role="tab" aria-selected="true" data-tab="education">来时路</button>
+            <button class="t-tab" role="tab" aria-selected="false" data-tab="work">工作经历</button>
+        </div>
     </div>
     <div class="qualification__sections">
         <div class="qualification__content qualification__active" data-content id="education">
@@ -508,174 +613,140 @@ status: new
 </div>
 
 <script>
-(function () {
-  const checkbox = document.getElementById('qualToggle');
-  const contents = document.querySelectorAll('.qualification__content');
-  const thumb = document.querySelector('.qualification__slider-thumb');
-  const toggle = checkbox.closest('.qualification__slider-toggle');
-  const optionLeft = toggle.querySelector('.option-left');
-  const optionRight = toggle.querySelector('.option-right');
-
-  if (!checkbox) return;
-
-  // 颜色插值
-  function hexToRgb(hex) {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16)
-    } : null;
+(function() {
+  // 3D 头像倾斜效果
+  function initAvatarTilt() {
+    var tilts = document.querySelectorAll('.intro-avatar.t-tilt');
+    
+    tilts.forEach(function(tilt) {
+      var card = tilt.querySelector('.avatar-tilt-card');
+      if (!card) return;
+      
+      // 鼠标进入
+      tilt.addEventListener('mouseenter', function() {
+        tilt.classList.add('is-hover');
+      });
+      
+      // 鼠标移动 - 计算倾斜角度
+      tilt.addEventListener('mousemove', function(e) {
+        var rect = tilt.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        
+        // 计算中心点偏移 (-1 到 1)
+        var centerX = rect.width / 2;
+        var centerY = rect.height / 2;
+        var percentX = (x - centerX) / centerX;
+        var percentY = (y - centerY) / centerY;
+        
+        // 计算旋转角度 (最大 ±15度)
+        var maxRotate = 15;
+        var rx = -percentY * maxRotate;
+        var ry = percentX * maxRotate;
+        
+        // 计算光泽位置 (0% 到 100%)
+        var gx = (x / rect.width) * 100;
+        var gy = (y / rect.height) * 100;
+        
+        // 应用样式
+        card.style.setProperty('--tilt-rx', rx + 'deg');
+        card.style.setProperty('--tilt-ry', ry + 'deg');
+        card.style.setProperty('--tilt-gx', gx + '%');
+        card.style.setProperty('--tilt-gy', gy + '%');
+        
+        // 添加快速跟随类
+        card.classList.add('is-tilting');
+      });
+      
+      // 鼠标离开 - 重置
+      tilt.addEventListener('mouseleave', function() {
+        tilt.classList.remove('is-hover');
+        card.classList.remove('is-tilting');
+        card.style.setProperty('--tilt-rx', '0deg');
+        card.style.setProperty('--tilt-ry', '0deg');
+      });
+    });
   }
-
-  function interpolateColor(color1, color2, factor) {
-    const c1 = hexToRgb(color1);
-    const c2 = hexToRgb(color2);
-    const r = Math.round(c1.r + (c2.r - c1.r) * factor);
-    const g = Math.round(c1.g + (c2.g - c1.g) * factor);
-    const b = Math.round(c1.b + (c2.b - c1.b) * factor);
-    return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  
+  // 初始化头像倾斜
+  initAvatarTilt();
+  
+  function initTabs() {
+    var tabsContainers = document.querySelectorAll('.t-tabs');
+    
+    tabsContainers.forEach(function(container) {
+      var pill = container.querySelector('.t-tabs-pill');
+      var tabs = container.querySelectorAll('.t-tab');
+      var contents = document.querySelectorAll('.qualification__content');
+      
+      if (!pill || tabs.length === 0) return;
+      
+      // 更新药丸位置和大小
+      function updatePill(activeTab, immediate) {
+        if (immediate) {
+          pill.style.transition = 'none';
+        }
+        pill.style.width = activeTab.offsetWidth + 'px';
+        pill.style.transform = 'translateX(' + activeTab.offsetLeft + 'px)';
+        
+        if (immediate) {
+          // 强制重绘
+          pill.offsetHeight;
+          pill.style.transition = '';
+        }
+      }
+      
+      // 初始化第一个标签
+      var activeTab = container.querySelector('.t-tab[aria-selected="true"]');
+      if (activeTab) {
+        updatePill(activeTab, true);
+      }
+      
+      // 标签点击事件
+      tabs.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+          var tabId = tab.getAttribute('data-tab');
+          
+          // 更新标签状态
+          tabs.forEach(function(t) {
+            t.setAttribute('aria-selected', 'false');
+          });
+          tab.setAttribute('aria-selected', 'true');
+          
+          // 更新药丸位置
+          updatePill(tab, false);
+          
+          // 更新内容面板
+          contents.forEach(function(content) {
+            content.classList.remove('qualification__active');
+          });
+          var targetContent = document.getElementById(tabId);
+          if (targetContent) {
+            targetContent.classList.add('qualification__active');
+          }
+        });
+      });
+      
+      // 窗口大小改变时重新定位
+      var resizeTimeout;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+          var currentActive = container.querySelector('.t-tab[aria-selected="true"]');
+          if (currentActive) {
+            updatePill(currentActive, true);
+          }
+        }, 100);
+      });
+    });
   }
-
-  const COLOR_LEFT_ACTIVE = '#409eff';
-  const COLOR_LEFT_INACTIVE = '#8896a7';
-  const COLOR_RIGHT_ACTIVE = '#409eff';
-  const COLOR_RIGHT_INACTIVE = '#8896a7';
-
-  const states = [
-    { id: '#education' },
-    { id: '#work' },
-  ];
-
-  const applyState = (index) => {
-    const target = document.querySelector(states[index].id);
-    if (!target) return;
-
-    contents.forEach(c => c.classList.remove('qualification__active'));
-    target.classList.add('qualification__active');
-  };
-
-  // 初始化
-  applyState(0);
-
-  // 点击/滑动切换
-  checkbox.addEventListener('change', () => {
-    applyState(checkbox.checked ? 1 : 0);
-  });
-
-  // 触摸滑动支持（保留原有行为）
-  let touchStartX = 0;
-  toggle.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-  }, { passive: true });
-
-  toggle.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
-    const diff = endX - touchStartX;
-    if (Math.abs(diff) > 30) {
-      checkbox.checked = diff < 0;
-      checkbox.dispatchEvent(new Event('change'));
-    }
-  }, { passive: true });
-
-  // 鼠标拖拽支持（带滑块实时跟随）
-  let isMouseDown = false;
-  let isMouseDragging = false;
-  let mouseDragStartX = 0;
-  let startChecked = false;
-  let maxTranslate = 0;
-
-  toggle.addEventListener('mousedown', (e) => {
-    isMouseDown = true;
-    isMouseDragging = false;
-    mouseDragStartX = e.clientX;
-    startChecked = checkbox.checked;
-    maxTranslate = thumb.offsetWidth;
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isMouseDown) return;
-
-    const diff = e.clientX - mouseDragStartX;
-
-    // 移动超过 3px 才算开始拖拽
-    if (!isMouseDragging && Math.abs(diff) > 3) {
-      isMouseDragging = true;
-      thumb.style.transition = 'none';
-      toggle.style.userSelect = 'none';
-    }
-
-    if (!isMouseDragging) return;
-
-    const baseTranslate = startChecked ? maxTranslate : 0;
-    let newTranslate = baseTranslate + diff;
-
-    // 限制在轨道范围内
-    newTranslate = Math.max(0, Math.min(newTranslate, maxTranslate));
-
-    thumb.style.transform = 'translateX(' + newTranslate + 'px)';
-
-    // 文字颜色跟随滑块位置实时渐变
-    const progress = newTranslate / maxTranslate;
-    if (optionLeft) {
-      optionLeft.style.color = interpolateColor(COLOR_LEFT_ACTIVE, COLOR_LEFT_INACTIVE, progress);
-    }
-    if (optionRight) {
-      optionRight.style.color = interpolateColor(COLOR_RIGHT_INACTIVE, COLOR_RIGHT_ACTIVE, progress);
-    }
-  });
-
-  document.addEventListener('mouseup', (e) => {
-    if (!isMouseDown) return;
-    isMouseDown = false;
-
-    if (!isMouseDragging) {
-      // 纯点击，不干预，让 label 正常处理
-      return;
-    }
-
-    isMouseDragging = false;
-    toggle.style.userSelect = '';
-
-    const diff = e.clientX - mouseDragStartX;
-    const baseTranslate = startChecked ? maxTranslate : 0;
-    let finalTranslate = baseTranslate + diff;
-    finalTranslate = Math.max(0, Math.min(finalTranslate, maxTranslate));
-
-    // 超过一半就切换
-    const shouldCheck = finalTranslate > maxTranslate / 2;
-
-    thumb.style.transition = 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)';
-
-    if (shouldCheck !== startChecked) {
-      checkbox.checked = shouldCheck;
-      checkbox.dispatchEvent(new Event('change'));
-      toggle.dataset.dragged = 'true';
-      setTimeout(function () { delete toggle.dataset.dragged; }, 0);
-    }
-
-    // 弹回或滑到目标位置
-    thumb.style.transform = shouldCheck
-      ? 'translateX(' + maxTranslate + 'px)'
-      : 'translateX(0px)';
-
-    // 动画结束后清除 inline style，让 CSS 选择器接管
-    setTimeout(function () {
-      thumb.style.transition = '';
-      thumb.style.transform = '';
-      if (optionLeft) optionLeft.style.color = '';
-      if (optionRight) optionRight.style.color = '';
-    }, 350);
-  });
-
-  // 拖拽结束后阻止 label 的 click 重复触发
-  toggle.addEventListener('click', (e) => {
-    if (toggle.dataset.dragged === 'true') {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  });
-
+  
+  // DOM 加载完成后初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTabs);
+  } else {
+    initTabs();
+  }
 })();
 </script>
 
@@ -796,7 +867,7 @@ status: new
     ---
 
     <center><font  color= #757575 size=6>Twitter</font>
-    [@Wcowin :material-twitter:](https://twitter.com/wcowin_){.md-button}</center>
+    [@Wcowin :material-twitter:](https://x.com/intent/follow?screen_name=kewen9694){.md-button}</center>
 
 </div>
 </div>
@@ -825,7 +896,7 @@ status: new
         :fontawesome-brands-telegram: Telegram
     </a>
     &nbsp;&nbsp;
-    <a href="https://twitter.com/wcowin_" class="md-button">
+    <a href="https://x.com/intent/follow?screen_name=kewen9694" class="md-button">
         :fontawesome-brands-twitter: Twitter
     </a>
     </center> -->

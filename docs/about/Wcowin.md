@@ -44,7 +44,7 @@ hide:
 </p>
 
 <!-- <p align="center">
-  <a href="https://twitter.com/Wcowin_" target="_blank"><img src="https://img.icons8.com/plasticine/100/000000/twitter.png" width="50" /></a>
+  <a href="https://x.com/intent/follow?screen_name=kewen9694" target="_blank"><img src="https://img.icons8.com/plasticine/100/000000/twitter.png" width="50" /></a>
   <a href="https://www.instagram.com/wcowin_/" target="_blank"><img src="https://img.icons8.com/plasticine/100/000000/instagram-new.png" width="50" /></a>
   <a href="mailto:wangkewen821@gmail.com" target="_blank"><img src="https://img.icons8.com/plasticine/100/000000/gmail.png" width="50" /></a>
 </p> -->
