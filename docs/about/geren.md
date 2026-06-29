@@ -867,7 +867,7 @@ status: new
     ---
 
     <center><font  color= #757575 size=6>Twitter</font>
-    [@Wcowin :material-twitter:](https://x.com/intent/follow?screen_name=kewen9694){.md-button}</center>
+    [@Wcowin :material-twitter:](https://x.com/intent/follow?screen_name=Wcowin_){.md-button}</center>
 
 </div>
 </div>

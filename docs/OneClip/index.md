@@ -5,7 +5,7 @@ hide:
   - toc
 ---
 
-# OneClip 更新中心
+# OneClip 更新中心(此记录已经废弃)
 
 OneClip 是一款简单专业的 macOS 剪贴板管理工具。
 
@@ -17,12 +17,14 @@ OneClip 是一款简单专业的 macOS 剪贴板管理工具。
 
 ### 最新版本
 
-- **[OneClip 1.5.9](updates/notes/OneClip-1.5.9-zh.html)** - 最新版本
+- **[OneClip 1.6.1](updates/notes/OneClip-1.6.1-zh.html)** - 最新版本
 
 ### 历史版本
 
 | 版本 | 更新说明 |
 |------|--------|
+| 1.6.6 | [查看更新说明](updates/notes/OneClip-1.6.0-zh.html) |
+| 1.5.9 | [查看更新说明](updates/notes/OneClip-1.5.9-zh.html) |
 | 1.5.8 | [查看更新说明](updates/notes/OneClip-1.5.8-zh.html) |
 | 1.5.7 | [查看更新说明](updates/notes/OneClip-1.5.7-zh.html) |
 | 1.5.6 | [查看更新说明](updates/notes/OneClip-1.5.6-zh.html) |

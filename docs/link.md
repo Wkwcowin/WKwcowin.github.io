@@ -55,7 +55,7 @@ comments: false
       <img class="ava" loading="lazy" decoding="async" src="https://zensical.org/assets/zensical.svg" />
       <div class="card-header">
         <div>
-          <a href="https://wcowin.github.io/Zensical-Chinese-Tutorial/" target="_blank">Zensical教程</a>
+          <a href="https://wcowin.work/Zensical-Chinese-Tutorial/" target="_blank">Zensical教程</a>
         </div>
         <div class="info">
           撰写最新的Zensical中文教程
@@ -2170,24 +2170,51 @@ async>
       // 监听图片加载完成
       var contentImg = card.querySelector('.card-content .ava');
       if (contentImg) {
-        if (contentImg.complete) {
-          // 图片已缓存，直接显示
+        // 处理懒加载：如果有 data-src，先设置 src 开始加载
+        var dataSrc = contentImg.getAttribute('data-src');
+        if (dataSrc && !contentImg.src) {
+          contentImg.src = dataSrc;
+          contentImg.removeAttribute('data-src');
+        }
+        
+        // 检查图片是否已加载完成（包括缓存情况）
+        var isImageLoaded = function() {
+          return contentImg.complete && contentImg.naturalWidth > 0;
+        };
+        
+        if (isImageLoaded()) {
+          // 图片已缓存或同步加载完成，短暂延迟后显示
           setTimeout(function() {
             card.classList.remove('is-loading');
             card.classList.add('is-loaded');
           }, 300);
         } else {
           // 图片未加载，等待加载完成
-          contentImg.addEventListener('load', function() {
+          var loadHandler = function() {
             card.classList.remove('is-loading');
             card.classList.add('is-loaded');
-          });
+            contentImg.removeEventListener('load', loadHandler);
+            contentImg.removeEventListener('error', errorHandler);
+          };
+          
+          var errorHandler = function() {
+            // 图片加载失败也显示卡片
+            card.classList.remove('is-loading');
+            card.classList.add('is-loaded');
+            contentImg.removeEventListener('load', loadHandler);
+            contentImg.removeEventListener('error', errorHandler);
+          };
+          
+          contentImg.addEventListener('load', loadHandler);
+          contentImg.addEventListener('error', errorHandler);
           
           // 超时处理（3秒后强制显示）
           setTimeout(function() {
             if (!card.classList.contains('is-loaded')) {
               card.classList.remove('is-loading');
               card.classList.add('is-loaded');
+              contentImg.removeEventListener('load', loadHandler);
+              contentImg.removeEventListener('error', errorHandler);
             }
           }, 3000);
         }
