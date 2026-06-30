@@ -7,11 +7,12 @@ hide:
   - feedback
 ---
 
-恳请批评指正！
+!!! note
+    由于本人知识面以及时间的限制，文章尚有较多不足之处，恳请批评指正！
 
 <div class="grid cards" markdown>
 
--   :octicons-bookmark-16:{ .lg .middle } __个人简历__
+-   :octicons-bookmark-16:{ .lg .middle } __本科毕设__
 
     ---
 
