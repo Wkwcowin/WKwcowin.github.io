@@ -38,7 +38,7 @@ jobs:
 
       # IndexNow - 通知搜索引擎内容更新
       - name: IndexNow
-        uses: bojieyang/indexnow-action@v2
+        uses: bojieyang/indexnow-action@v3
         with:
           sitemap-location: "https://wcowin.work/sitemap.xml"
           key: ${{ secrets.INDEXNOW_KEY }}
