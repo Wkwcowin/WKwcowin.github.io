@@ -1328,6 +1328,17 @@ comments: false
         </div>
       </div>
     <div class="card">
+      <img class="ava" loading="lazy" decoding="async" src="https://wiki.eryajf.net/img/logo.png" />
+      <div class="card-header">
+        <div>
+          <a href="https://wiki.eryajf.net/" target="_blank">二丫讲梵</a>
+        </div>
+        <div class="info">
+          💻学习📝记录🔗分享
+        </div>
+      </div>
+    </div>
+    <div class="card">
       <img class="ava" loading="lazy" decoding="async" src="https://re.tsh520.cn/zl/tx.webp" />
       <div class="card-header">
         <div>
@@ -1338,6 +1349,9 @@ comments: false
         </div>
       </div>
     </div>
+
+
+
   </div>
 </div>
 

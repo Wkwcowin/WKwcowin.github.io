@@ -28,4 +28,4 @@ OneClip 始终把公益牢记在心（按月展示）：
 !!! note
     > 如果您有好的建议或问题，请发邮件到 [vip@oneclip.cloud](mailto:vip@oneclip.cloud)  
     您也可以考虑和OneClip一起为公益做贡献  
-    打卡支付宝搜索公益，然后搜索春蕾计划
+    支付宝搜索公益，然后搜索春蕾计划
