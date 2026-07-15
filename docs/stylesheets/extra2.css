@@ -382,3 +382,10 @@ nav.md-nav--secondary ul ul {
 .md-typeset pre code .hll {
   display: block !important;
 }
+
+/* Keep long desktop sidebars in document flow until Zensical constrains them. */
+@media screen and (min-width: 76.25em) {
+  html.js .md-sidebar:has(> .md-sidebar__scrollwrap:not([style*="height"])) {
+    height: auto;
+  }
+}
