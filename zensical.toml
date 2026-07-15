@@ -48,7 +48,7 @@ extra_javascript = [
     "https://oneclip.cloud/Wcowin/javascripts/katex.js",
     "https://oneclip.cloud/Wcowin/javascripts/feedback.js",  # Umami 反馈追踪
     "https://oneclip.cloud/Wcowin/javascripts/github-heatmap.js",                        # GitHub 贡献热力图
-    "https://oneclip.cloud/Wcowin/javascripts/github-repo-card.js"                       # GitHub 仓库卡片
+    "javascripts/github-repo-card.js"                                                    # GitHub 仓库卡片
 ]
 
 # =====  CSS 文件 =====

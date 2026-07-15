@@ -306,9 +306,11 @@
     await Promise.all(Array.from(cards).map((card) => initCard(card)));
   }
 
+  // Render cards that are already in the document immediately. Pages can load
+  // this script next to their cards to reserve the final layout before anchor
+  // scrolling runs; the DOMContentLoaded pass picks up any later cards.
+  initGitHubRepoCards();
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initGitHubRepoCards);
-  } else {
-    initGitHubRepoCards();
   }
 })();

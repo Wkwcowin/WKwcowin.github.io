@@ -19,7 +19,7 @@ hide:
     <iframe src="/research/assets/2425_50_11799_080701_2021413094_BS.pdf" width="100%" height="1250px" style="border: 1.5px solid #ccc; overflow: auto; border-radius: 18px; background: #fff;"></iframe>
 
     <center>
-    [:material-download: 下载简历](/research/assets/2425_50_11799_080701_2021413094_BS.pdf){ .md-button}
+    [:material-download: 下载](/research/assets/2425_50_11799_080701_2021413094_BS.pdf){ .md-button}
     </center>
     
 </div>

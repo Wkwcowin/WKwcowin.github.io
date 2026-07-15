@@ -389,6 +389,9 @@ status: new
   ></a>
 </div>
 
+<!-- 在后续标题被解析和锚点定位前生成卡片，避免首屏布局跳动。 -->
+<script src="/javascripts/github-repo-card.js"></script>
+
 <!-- [:material-download: 查看简历](../assets/个人简历.pdf){ .md-button}
 {: style="text-align: center;" } -->
 
