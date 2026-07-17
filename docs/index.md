@@ -31,7 +31,7 @@ hide:
       🙌🏻 <a href="https://github.com/jaywhj/mkdocs-materialx" target="_blank" rel="noopener noreferrer">MaterialX</a> —— 下一代 MkDocs主题，让你继续用熟悉的方式构建漂亮文档
     </div>
     <div class="oneclip-announcement-item">
-      🎬 <a href="https://dramashort.casa/s/dtFYMVDv" target="_blank" rel="noopener noreferrer">短剧速看</a> —— 千万热门短剧免费看！剧情高能不断，打开就停不下来
+      🎬 <a href="https://shorttv.online/s/dtFYMVDv" target="_blank" rel="noopener noreferrer">短剧速看</a> —— 千万热门短剧免费看！剧情高能不断，打开就停不下来
     </div>
     <!-- <div class="oneclip-announcement-item">
       📱 <a href="https://api.simhaoka.com/?u=Wcowin" target="_blank" rel="noopener noreferrer">办电话卡</a> —— 月租低至29元｜Wcowin严选
