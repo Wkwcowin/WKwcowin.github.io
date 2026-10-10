@@ -48,6 +48,7 @@ hide_comment: true
 
     架构创新解析与开源 Agent 平台实战
 
+    - [AI Coding Agent](ai-coding-agent/) - 从代码补全到自主软件工程
     - [Attention Residuals](/develop/AI/attention-residuals/) - Kimi 团队架构创新解读
     - [JEPA 架构](/develop/AI/jepa/) - 联合嵌入预测架构，通往世界模型的非生成之路
     - [具身智能](/develop/AI/embodied-ai/) - 当 AI 拥有身体，物理世界迎来新纪元
@@ -57,5 +58,6 @@ hide_comment: true
     - [OpenClaw](/develop/AI/openclaw/) - 本地优先的开源 AI Agent 平台
     - [Hermes Agent](/develop/AI/hermes-agent/) - 自进化的 AI Agent（内置学习闭环）
     - [nanobot](/develop/AI/nanobot/) - 超轻量级 AI 助手（4000 行代码）
+    - [DeepSeek Harness (dsh)](/develop/AI/deepseek-harness/) - 用"一切皆插件"重构 Agent 运行时
 
 </div>

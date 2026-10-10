@@ -1,6 +1,6 @@
 ---
 title: JEPA：联合嵌入预测架构——通往世界模型的非生成之路
-comments: true
+# comments: true
 summary: 深入解读 Yann LeCun 提出的联合嵌入预测架构（JEPA），从核心原理到 I-JEPA、V-JEPA 2、VL-JEPA 三大实现，再到 2026 年 LeCun 创立 AMI Labs 推动 JEPA 工程化拐点的全景分析。
 date: 2026-06-06
 status: new
@@ -325,7 +325,7 @@ LeCun 认为，JEPA 是构建世界模型的最佳架构候选：
 
 2026年初，Yann LeCun 离开 Meta，创立了 **AMI Labs（Advanced Machine Intelligence Labs）**：
 
-- **估值**：35 亿美元（尚未推出公开产品）
+- **融资**：完成约 10.3 亿美元（约 $1.03B）种子轮融资（尚未推出公开产品）
 - **使命**：将 JEPA 架构推向新高度
 - **目标**：构建能理解物理世界、拥有持久记忆、能推理和规划的 AI 系统
 - **策略**：开源优先，与 Meta 的闭源路线形成鲜明对比
@@ -438,7 +438,7 @@ JEPA 代表着 AI 研究中一条与主流 LLM 不同的道路：
 
 ---
 
-**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wkwcowin)
+**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wcowin)
 
 ---
 

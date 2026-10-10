@@ -59,13 +59,16 @@ tags:
 
 密码学在现代信息安全中扮演着不可或缺的角色，其核心目标包括：
 
-- **保密性**：确保只有授权方能访问信息。
-- **完整性**：验证数据在传输或存储过程中未被篡改。
-- **认证性**：确认通信方的身份。
+- **保密性（Confidentiality）**：确保只有授权方能访问信息。
+- **完整性（Integrity）**：验证数据在传输或存储过程中未被篡改。
+- **可用性（Availability）**：确保授权方在需要时能够正常访问信息和资源。
 
-**以上称为信息安全的三大基本原则（CIA）。**
+**以上三项称为信息安全的三大基本原则（CIA 三元组）。**
 
-- **不可否认性**：防止一方否认其行为，如发送消息。
+此外，在密码学实践中还常强调以下安全属性：
+
+- **认证性（Authentication）**：确认通信方的身份。
+- **不可否认性（Non-repudiation）**：防止一方否认其行为，如发送消息。
 
 其应用范围广泛，包括但不限于：
 
@@ -107,4 +110,4 @@ tags:
 - [GeeksforGeeks: History of Cryptography](https://www.geeksforgeeks.org/history-of-cryptography/)
 - [Fortinet: What is Cryptography? Definition, Importance, Types](https://www.fortinet.com/resources/cyberglossary/what-is-cryptography)
 
-**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wkwcowin)
+**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wcowin)

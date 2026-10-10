@@ -727,7 +727,7 @@ t.parentNode.insertBefore(e,t)}})();
 -   :material-tooltip-edit:{ .lg .middle } __关于__
 
     ---
-    - [效率](https://github.com/Wkwcowin/WKwcowin.github.io)
+    - [效率](https://github.com/Wcowin/Wcowin.github.io)
 </div>
 
 <div class="grid cards" style="display: grid; grid-template-columns: 1fr;" markdown>
@@ -736,7 +736,7 @@ t.parentNode.insertBefore(e,t)}})();
 
     ---
 
-    :material-eye-check:{ .lg .middle } [Wcowin](https://github.com/Wkwcowin/WKwcowin.github.io) - 技术博客
+    :material-eye-check:{ .lg .middle } [Wcowin](https://github.com/Wcowin/Wcowin.github.io) - 技术博客
 
 <div class="grid cards" style="display:grid; grid-template-columns: 49% 49% !important;" markdown>
 
@@ -747,7 +747,7 @@ t.parentNode.insertBefore(e,t)}})();
 
     更新中...
 
-    [→ 所有版本](https://github.com/Wkwcowin/WKwcowin.github.io)
+    [→ 所有版本](https://github.com/Wcowin/Wcowin.github.io)
 
 
 -   :material-flag-variant-minus:{ .lg .middle } __Wcowin__
@@ -756,7 +756,7 @@ t.parentNode.insertBefore(e,t)}})();
 
     更新中...
 
-    [→ 了解更多](https://github.com/Wkwcowin/WKwcowin.github.io)
+    [→ 了解更多](https://github.com/Wcowin/Wcowin.github.io)
 
 </div>
 
@@ -787,8 +787,6 @@ t.parentNode.insertBefore(e,t)}})();
 - ^^This was inserted^^
 - ~~This was deleted~~
 
-
-[![Readme Card](https://github-readme-stats-beta-amber-44.vercel.app/api?username=Wcowin&show_icons=true&role=OWNER,ORGANIZATION_MEMBER,COLLABORATOR&locale=zh-my)](#)
 
 
 <div class="miniwebtoolwidget" data-calculator="modulo-calculator" data-width="380"><div class="miniwebtoolh">模计算机</div><p><a href="https://miniwebtool.com/zh-cn/modulo-calculator/" target="_blank"></a></p></div><script async src="https://miniwebtool.com/zh-cn/embed.js?v=1"></script>

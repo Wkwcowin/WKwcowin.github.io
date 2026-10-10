@@ -1,6 +1,6 @@
 ---
 title: nanobot：超轻量级 AI 助手
-comments: true
+# comments: true
 date: 2026-03-10
 ---
 
@@ -383,7 +383,7 @@ pip install -U nanobot-ai
 - **发布日期**：2026 年 2 月 2 日
 - **当前版本**：v0.1.4.post5（2026 年 3 月 16 日）
 - **编程语言**：Python 3.10+
-- **GitHub Stars**：社区增长很快，建议以 GitHub 页面实时数据为准
+- **GitHub 热度**：社区增长很快，具体星标数请以 GitHub 页面实时数据为准
 - **开源协议**：开源
 - **官方网站**：[nanobot.club](https://nanobot.club)
 
@@ -411,4 +411,4 @@ nanobot 是一个极简主义的 AI 助手框架，用最少的代码实现了�
 
 ---
 
-**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wkwcowin)
+**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wcowin)

@@ -1,6 +1,6 @@
 ---
 title: Agentic AI：从 Chatbot 到可行动的智能体
-comments: true
+# comments: true
 summary: 用开发者视角，系统讲清什么是 Agentic AI、和传统聊天模型有何差别、典型架构长什么样，以及 2026 年普通开发者可以如何快速上手。
 date: 2026-02-27
 status: new
@@ -256,7 +256,7 @@ Agent 不可能只靠上下文窗口，需要更长期的记忆和知识：
 
 | 框架/平台 | 特点 | 2025-2026 更新 |
 |-----------|------|----------------|
-| **LangGraph** | 图结构工作流，支持循环、分支 | v0.4（2026年5月）引入全新 Hub 集成、GraphRAG 支持、LangSmith 深度整合 |
+| **LangGraph** | 图结构工作流，支持循环、分支 | 持续迭代，新增 Hub 集成、与 LangSmith 深度整合（注意：其 GraphRAG 能力需通过组合外部图数据库/抽取模块实现，并非框架"原生内置"） |
 | **Dify** | 开源 LLM 应用平台，可视化工作流 | 持续迭代，支持更多 Agent 节点和 MCP 集成 |
 | **MetaGPT** | 模拟软件公司流水线 | 多智能体协作模式更加成熟 |
 | **CrewAI** | 角色化 Agent 团队 | 企业级功能增强 |
@@ -370,4 +370,4 @@ Agentic AI 很有吸引力，但也带来了新的风险，需要留意几件事
 
 ---
 
-**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wkwcowin)
+**本文作者：** [<span class="author-avatar-wrapper"><img class="author-avatar" src="https://s1.imagehub.cc/images/2025/12/06/28380affd86b014a6dcaf082fcc97064.png" width="28" height="28" alt="Wcowin" /><span class="author-name-popover">王科文</span></span>](https://github.com/Wcowin)

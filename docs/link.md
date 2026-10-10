@@ -73,17 +73,6 @@ comments: false
         </div>
       </div>
     </div>
-   <!-- <div class="card">
-     <img class="ava" loading="lazy" decoding="async" src="https://s2.loli.net/2024/02/07/S8GYheTZmCU96HK.png" />
-     <div class="card-header">
-      <div>
-       <a href="https://wcowin.work/WH-WKW/" target="_blank">小王和王老师的小站</a>
-      </div>
-      <div class="info">
-        无一是你，无一不是你
-      </div>
-     </div>
-    </div>  -->
     <div class="card">
       <img class="ava" loading="lazy" decoding="async" src="https://pica.zhimg.com/80/v2-1a0af4c184a27a3af3cea7009b0124d2_1440w.jpg" />
       <div class="card-header">
@@ -127,7 +116,7 @@ comments: false
      </div>
     </div>
     <div class="card">
-      <img class="ava" loading="lazy" decoding="async" src="https://www.80tz.cn/fluid.png" />
+      <img class="ava" loading="lazy" decoding="async" src="https://www.80tz.cn/assets/images/sites/logo/logo-blue.svg" />
       <div class="card-header">
         <div>
           <a href="https://www.80tz.cn" target="_blank">80后情感哲学交流</a>
@@ -533,7 +522,7 @@ comments: false
      </div>
     </div>
     <div class="card">
-     <img class="ava" loading="lazy" decoding="async" src="https://moshanghua.net/avatar.jpg" />
+     <img class="ava" loading="lazy" decoding="async" src="https://assets.moshanghua.net/img/mshlogo.png" />
      <div class="card-header">
       <div>
       <a href="https://moshanghua.net" target="_blank">花开陌上</a>
@@ -632,24 +621,13 @@ comments: false
      </div>
     </div>
    <div class="card">
-     <img class="ava" loading="lazy" decoding="async" src="https://blog.btwoa.com/screenshot.avif" />
+     <img class="ava" loading="lazy" decoding="async" src="https://mamama.ma/author.gif" />
      <div class="card-header">
       <div>
-       <a href="https://blog.btwoa.com" target="_blank">btwoa</a>
+       <a href="https://blog.btwoa.com" target="_blank">李则亦</a>
       </div>
       <div class="info">
       世界为你简单
-      </div>
-     </div>
-    </div>
-    <div class="card">
-     <img class="ava" loading="lazy" decoding="async" src="https://blog.viper3.top/usr/themes/Sunny/style/avatar/04.svg" />
-     <div class="card-header">
-      <div>
-      <a href="https://blog.viper3.top/" target="_blank">小霜南风</a>
-      </div>
-      <div class="info">
-      “散落一些碎花，凝结一些轻痕”
       </div>
      </div>
     </div>
@@ -765,10 +743,10 @@ comments: false
     <img class="ava" loading="lazy" decoding="async" src="https://avatars.githubusercontent.com/u/121679359?v=4" />
     <div class="card-header">
       <div>
-      <a href="https://linexic.top " target="_blank">LineXic书屋</a>
+      <a href="https://linexic.top " target="_blank">LineXic's website</a>
       </div>
       <div class="info">
-      难离难舍，想抱紧些
+      具体问题，具体分析
       </div>
     </div>
     </div>
@@ -1046,7 +1024,7 @@ comments: false
         </div>
       </div>    
       <div class="card">
-        <img class="ava" loading="lazy" decoding="async" src="https://blog.zhipro.com/favicon.ico" />
+        <img class="ava" loading="lazy" decoding="async" src="https://i.imgant.com/v2/demG6z0.png" />
         <div class="card-header">
           <div>
             <a href="https://blog.zhipro.com" target="_blank">求知学习社</a>
@@ -1055,18 +1033,18 @@ comments: false
         </div>
       </div>
       <div class="card">
-        <img class="ava" loading="lazy" decoding="async" src="https://s2.loli.net/2025/08/30/No2OBAn7h3JTtXZ.png" />
+        <img class="ava" loading="lazy" decoding="async" src="https://bee-reg-ab.imagency.cn/mr/6175/26/58ed5b59c6ed9ff04506d982b0dd582c.jpg" />
         <div class="card-header">
           <div>
-            <a href="https://blog.flyburg.cc/" target="_blank">雨露霜雪</a>
+            <a href="https://flyburg.cc" target="_blank">羽城</a>
           </div>
           <div class="info">
-            相信彩虹
+            Alea jacta est!
           </div>
         </div>
       </div>
       <div class="card">
-        <img class="ava" loading="lazy" decoding="async" src="https://i.zhyong.site/i/2026/02/17/6994661354dc2.png" />
+        <img class="ava" loading="lazy" decoding="async" src="https://i.imgant.com/v2/GlImPKs.png" />
         <div class="card-header">
           <div>
             <a href="https://zhyong.site/" target="_blank">材料与逻辑</a>
@@ -1099,15 +1077,6 @@ comments: false
             <a href="https://blog.zrf.me/" target="_blank">周润发</a>
           </div>
           <div class="info">收录开源，好用的互联网项目</div>
-        </div>
-      </div>
-      <div class="card">
-        <img class="ava" loading="lazy" decoding="async" src="https://www.qixz.cn/avatar.avif" />
-        <div class="card-header">
-          <div>
-            <a href="https://www.qixz.cn/" target="_blank">筱序二十</a>
-          </div>
-          <div class="info">青序成栈·向简而生</div>
         </div>
       </div>
       <div class="card">
@@ -1349,13 +1318,99 @@ comments: false
         </div>
       </div>
     </div>
+    <div class="card">
+      <img class="ava" loading="lazy" decoding="async" src="https://aifiee-blog.oss-cn-beijing.aliyuncs.com/blog/images/1782719333889_1414.jpg" />
+      <div class="card-header">
+        <div>
+          <a href="https://www.aifiee.cn" target="_blank">Fiee's Blog</a>
+        </div>
+        <div class="info">
+          长风破浪会有时，直挂云帆济沧海
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <img class="ava" loading="lazy" decoding="async" src="https://cdn.lusyoe.com/images/lusyoe-logo.webp" />
+      <div class="card-header">
+        <div>
+          <a href="https://blog.lusyoe.com" target="_blank">青萍叙事</a>
+        </div>
+        <div class="info">
+          一个懂技术的产品汪🐶
+        </div>
+      </div>
+    </div>
+  <div class="card">
+    <img class="ava" loading="lazy" decoding="async" src="https://blog.xuioo.com/avatar.jpg" />
+    <div class="card-header">
+      <div>
+        <a href="https://blog.xuioo.com/" target="_blank">XUIOO</a>
+      </div>
+      <div class="info">
+        「纯粹祈愿皆成真」
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="ava" loading="lazy" decoding="async" src="https://winered-0v0.com/assets/images/avatar.png" />
+    <div class="card-header">
+      <div>
+        <a href="https://winered-0v0.com/" target="_blank">WineRed</a>
+      </div>
+      <div class="info">
+        尽管未来是当下每一刻的产物，明日依然不属于今日。
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="ava" loading="lazy" decoding="async" src="https://www.wanweishiyi.com/favicon.ico" />
+    <div class="card-header">
+      <div>
+        <a href="https://www.wanweishiyi.com/" target="_blank">万维思维</a>
+      </div>
+      <div class="info">
+        万维思维，探索知识的边界
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="ava" loading="lazy" decoding="async" src="https://blog.share888.top/favicon.ico" />
+    <div class="card-header">
+      <div>
+        <a href="https://blog.share888.top/" target="_blank">敲代码的卡卡罗特</a>
+      </div>
+      <div class="info">
+        灵魂和身体都要在路上
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="ava" loading="lazy" decoding="async" src="https://i.imgant.com/v2/lP015mA.png" />
+    <div class="card-header">
+      <div>
+        <a href="https://mixiao.fan/about/" target="_blank">米小饭饭布吉岛</a>
+      </div>
+      <div class="info">
+        分享自研应用、实用在线工具和技术文章，记录每个想法从灵感到上线的过程
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="ava" loading="lazy" decoding="async" src="https://zhh2001.github.io/avatar.jpg" />
+    <div class="card-header">
+      <div>
+        <a href="https://zhh2001.github.io/" target="_blank">旧梦与花</a>
+      </div>
+      <div class="info">
+        春风若有怜花意，可否许我再少年
+      </div>
+    </div>
+  </div>
 
 
 
   </div>
 </div>
-
-
 
 
 <!--
@@ -1593,17 +1648,6 @@ comments: false
       <img class="ava" loading="lazy" decoding="async" src="https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp" />
       <div class="card-header">
         <div>
-          <a href="https://blog.lusyoe.com" target="_blank">青萍叙事(打不开)</a>
-        </div>
-        <div class="info">
-          一个懂技术的产品汪🐶
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img class="ava" loading="lazy" decoding="async" src="https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp" />
-      <div class="card-header">
-        <div>
           <a href="https://collaigo.com" target="_blank">Collaigo(未加我方友链)</a>
         </div>
         <div class="info">
@@ -1619,6 +1663,28 @@ comments: false
       </div>
       <div class="info">
       迄今所有人生都大写着失败，但不妨碍我继续向前✨
+      </div>
+     </div>
+    </div>
+    <div class="card">
+     <img class="ava" loading="lazy" decoding="async" src="https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp" />
+     <div class="card-header">
+      <div>
+      <a href="https://blog.viper3.top/" target="_blank">小霜南风</a>
+      </div>
+      <div class="info">
+      “散落一些碎花，凝结一些轻痕”
+      </div>
+     </div>
+    </div>
+    <div class="card">
+     <img class="ava" loading="lazy" decoding="async" src="https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp" />
+     <div class="card-header">
+      <div>
+       <a href="https://www.qixz.cn/" target="_blank">筱序二十(打不开)</a>
+      </div>
+      <div class="info">
+      青序成栈·向简而生
       </div>
      </div>
     </div>
@@ -2140,10 +2206,9 @@ async>
 </script>
 </head> -->
 
-<!-- 头像加载失败兜底 + 骨架屏加载动画 -->
+<!-- 头像加载失败兜底 -->
 <script>
 (function() {
-  // 头像加载失败兜底
   document.addEventListener('error', function(e) {
     var img = e.target;
     if (img && img.classList && img.classList.contains('ava') && !img.dataset.retried) {
@@ -2152,104 +2217,10 @@ async>
       img.src = "https://pic2.zhimg.com/80/v2-ab74f4411a6ba48423f5671fbf04bbad_1440w.webp";
     }
   }, true);
-
-  // 骨架屏加载动画初始化
-  function initSkeletonLoader() {
-    var cards = document.querySelectorAll('.card');
-    
-    cards.forEach(function(card) {
-      // 如果卡片已经有骨架屏结构，跳过
-      if (card.querySelector('.card-skeleton')) return;
-      
-      // 获取原始内容
-      var originalContent = card.innerHTML;
-      var img = card.querySelector('.ava');
-      
-      // 添加加载中状态
-      card.classList.add('is-loading');
-      
-      // 构建骨架屏结构
-      var skeletonHTML = 
-        '<div class="card-skeleton">' +
-          '<div class="skel-avatar"></div>' +
-          '<div class="skel-text">' +
-            '<div class="skel-title"></div>' +
-            '<div class="skel-desc"></div>' +
-          '</div>' +
-        '</div>' +
-        '<div class="card-content">' + originalContent + '</div>';
-      
-      card.innerHTML = skeletonHTML;
-      
-      // 监听图片加载完成
-      var contentImg = card.querySelector('.card-content .ava');
-      if (contentImg) {
-        // 处理懒加载：如果有 data-src，先设置 src 开始加载
-        var dataSrc = contentImg.getAttribute('data-src');
-        if (dataSrc && !contentImg.src) {
-          contentImg.src = dataSrc;
-          contentImg.removeAttribute('data-src');
-        }
-        
-        // 检查图片是否已加载完成（包括缓存情况）
-        var isImageLoaded = function() {
-          return contentImg.complete && contentImg.naturalWidth > 0;
-        };
-        
-        if (isImageLoaded()) {
-          // 图片已缓存或同步加载完成，短暂延迟后显示
-          setTimeout(function() {
-            card.classList.remove('is-loading');
-            card.classList.add('is-loaded');
-          }, 300);
-        } else {
-          // 图片未加载，等待加载完成
-          var loadHandler = function() {
-            card.classList.remove('is-loading');
-            card.classList.add('is-loaded');
-            contentImg.removeEventListener('load', loadHandler);
-            contentImg.removeEventListener('error', errorHandler);
-          };
-          
-          var errorHandler = function() {
-            // 图片加载失败也显示卡片
-            card.classList.remove('is-loading');
-            card.classList.add('is-loaded');
-            contentImg.removeEventListener('load', loadHandler);
-            contentImg.removeEventListener('error', errorHandler);
-          };
-          
-          contentImg.addEventListener('load', loadHandler);
-          contentImg.addEventListener('error', errorHandler);
-          
-          // 超时处理（3秒后强制显示）
-          setTimeout(function() {
-            if (!card.classList.contains('is-loaded')) {
-              card.classList.remove('is-loading');
-              card.classList.add('is-loaded');
-              contentImg.removeEventListener('load', loadHandler);
-              contentImg.removeEventListener('error', errorHandler);
-            }
-          }, 3000);
-        }
-      } else {
-        // 没有图片，直接显示
-        card.classList.remove('is-loading');
-        card.classList.add('is-loaded');
-      }
-    });
-  }
-
-  // DOM加载完成后初始化
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initSkeletonLoader);
-  } else {
-    initSkeletonLoader();
-  }
 })();
 </script>
 
-<!--
+
 <script>
 (function() {
   var scheme = document.body.getAttribute("data-md-color-scheme");
@@ -2293,11 +2264,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   bodyObserver.observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
 });
- </script> -->
+ </script>
 
 
 <!-- 动态加载 Giscus，根据网站主题设置初始主题 -->
-<script>
+<!-- <script>
 (function() {
   var scheme = document.body.getAttribute("data-md-color-scheme");
   var theme = scheme === "slate" ? "dark" : "light";
@@ -2319,7 +2290,7 @@ document.addEventListener("DOMContentLoaded", function() {
   giscusScript.async = true;
   document.currentScript.parentNode.insertBefore(giscusScript, document.currentScript.nextSibling);
 })();
-</script>
+</script> -->
 
 <!-- 同步 Giscus 主题与网站主题 -->
 <script>
