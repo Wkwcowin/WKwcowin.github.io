@@ -1,4 +1,27 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "zensical build",
-  "outputDirectory": "site"
+  "outputDirectory": "site",
+  "redirects": [
+    {
+      "source": "/Zensical-Chinese-Tutorial",
+      "destination": "/Zensical-Chinese-Tutorial/",
+      "permanent": false
+    },
+    {
+      "source": "/Mkdocs-Wcowin",
+      "destination": "/Mkdocs-Wcowin/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/Zensical-Chinese-Tutorial/:path*",
+      "destination": "https://wkwcowin.github.io/Zensical-Chinese-Tutorial/:path*"
+    },
+    {
+      "source": "/Mkdocs-Wcowin/:path*",
+      "destination": "https://wkwcowin.github.io/Mkdocs-Wcowin/:path*"
+    }
+  ]
 }

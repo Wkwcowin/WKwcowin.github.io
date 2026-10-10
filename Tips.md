@@ -153,3 +153,15 @@ fetch('https://ipapi.co/json/')
   })
   .catch(() => {});
 </script>
+
+
+
+
+
+
+
+
+{
+  "buildCommand": "zensical build",
+  "outputDirectory": "site"
+}
